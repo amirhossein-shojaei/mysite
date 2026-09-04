@@ -7,4 +7,4 @@ import './styles/globals.css'
 import { LanguageProvider } from './locales'
 
 registerSW({ immediate: true })
-createRoot(document.getElementById('root')!).render(<StrictMode><LanguageProvider><BrowserRouter><AppRoutes /></BrowserRouter></LanguageProvider></StrictMode>)
+createRoot(document.getElementById('root')!).render(<StrictMode><LanguageProvider><BrowserRouter basename="/mysite"><AppRoutes /></BrowserRouter></LanguageProvider></StrictMode>)
