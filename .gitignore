@@ -1,0 +1,16 @@
+node_modules
+# Keep environment variables out of version control
+.env
+.env.prod
+prisma/migrations
+src/generated
+src/.logs
+prisma/certs
+certs
+certs/oauth
+.Ds_Store
+configs
+node_logs
+mongo_data
+dist
+minio_data/
