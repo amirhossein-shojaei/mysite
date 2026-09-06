@@ -66,7 +66,6 @@ export const projects: Project[] = [
     ],
     type: "Enterprise inventory/product coding system",
     image: "/projects/oiec.webp",
-    logo: "/projects/oiec-logo.webp",
   },
   {
     id: "co-up",
@@ -93,7 +92,6 @@ export const projects: Project[] = [
     ],
     type: "Coworking space reservation PWA",
     image: "/projects/coup.webp",
-    logo: "/projects/coup-logo.webp",
   },
   {
     id: "inotex",
