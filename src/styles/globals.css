@@ -1132,6 +1132,56 @@ textarea {
     monospace;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  z-index: 3;
+}
+.project-shot,
+.detail-shot {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.project-art:before {
+  z-index: 2;
+}
+.detail-art:after {
+  z-index: 2;
+}
+.project-logo,
+.detail-logo {
+  position: absolute;
+  max-width: 140px;
+  object-fit: contain;
+  background: color-mix(in srgb, var(--bg) 82%, transparent);
+  border: 1px solid rgba(96, 115, 107, 0.6);
+  border-radius: 10px;
+  padding: 8px 12px;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.35);
+  z-index: 3;
+}
+.project-logo {
+  left: 14px;
+  bottom: 14px;
+  max-height: 46px;
+}
+.detail-logo {
+  right: 22px;
+  bottom: 22px;
+  max-height: 60px;
+  max-width: 170px;
+}
+.preview-label {
+  z-index: 3;
+}
+.site:dir(rtl) .project-logo {
+  left: auto;
+  right: 14px;
+}
+.site:dir(rtl) .detail-logo {
+  right: auto;
+  left: 22px;
 }
 .detail-grid {
   display: grid;

@@ -13,6 +13,7 @@ export function ProjectCard({
   const { t, language } = useLanguage();
   const text = (value: string) => t(value);
   const arrow = language === "fa" ? "←" : "→";
+  const base = import.meta.env.BASE_URL;
   const preview =
     project.id === "elixia" ? (
       <>
@@ -83,15 +84,34 @@ export function ProjectCard({
       </div>
       <div className={`project-art art-${project.id}`}>
         <span className="preview-label">{text("PROJECT PREVIEW")}</span>
-        <div className="mock-window">
-          <div className="mock-bar">
-            <i />
-            <i />
-            <i />
-            <b>{project.title}</b>
+        {project.image ? (
+          <>
+            <img
+              className="project-shot"
+              src={`${base}${project.image}`}
+              alt={project.title}
+              loading="lazy"
+            />
+            {project.logo && (
+              <img
+                className="project-logo"
+                src={`${base}${project.logo}`}
+                alt={`${project.title} logo`}
+                loading="lazy"
+              />
+            )}
+          </>
+        ) : (
+          <div className="mock-window">
+            <div className="mock-bar">
+              <i />
+              <i />
+              <i />
+              <b>{project.title}</b>
+            </div>
+            <div className="mock-content">{preview}</div>
           </div>
-          <div className="mock-content">{preview}</div>
-        </div>
+        )}
       </div>
       <p className="eyebrow">{text(project.category)}</p>
       <h3>{project.title}</h3>

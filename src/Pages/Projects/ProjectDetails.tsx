@@ -5,6 +5,7 @@ import { useLanguage } from "../../locales";
 export function ProjectDetails() {
   const { id } = useParams();
   const { t, language } = useLanguage();
+  const base = import.meta.env.BASE_URL;
   const p = projects.find((x) => x.id === id);
   const arrow = language === "fa" ? "←" : "→";
   if (!p)
@@ -48,8 +49,27 @@ export function ProjectDetails() {
           )}
         </div>
       </div>
-      <div className="detail-art">
-        <span>{p.title.slice(0, 2).toUpperCase()}</span>
+      <div
+        className={`detail-art${p.id === "oiec" || p.id === "co-up" ? " has-logo" : ""}`}
+      >
+        {p.image ? (
+          <img
+            className="detail-shot"
+            src={`${base}${p.image}`}
+            alt={p.title}
+            loading="lazy"
+          />
+        ) : (
+          <span>{p.title.slice(0, 2).toUpperCase()}</span>
+        )}
+        {p.logo && (
+          <img
+            className="detail-logo"
+            src={`${base}${p.logo}`}
+            alt={`${p.title} logo`}
+            loading="lazy"
+          />
+        )}
         <small>{t(p.type)}</small>
       </div>
       <div className="detail-grid">

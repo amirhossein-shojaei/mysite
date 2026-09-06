@@ -14,6 +14,8 @@ export interface Project {
   contribution: string;
   features: string[];
   type: string;
+  image?: string;
+  logo?: string;
 }
 const later = "Details will be added later.";
 export const projects: Project[] = [
@@ -39,6 +41,7 @@ export const projects: Project[] = [
       "Mobile-installable PWA",
     ],
     type: "AI-powered fitness and nutrition PWA",
+    image: "/projects/elixia.webp",
   },
   {
     id: "oiec",
@@ -62,6 +65,8 @@ export const projects: Project[] = [
       "AI-assisted conversion",
     ],
     type: "Enterprise inventory/product coding system",
+    image: "/projects/oiec.webp",
+    logo: "/projects/oiec-logo.webp",
   },
   {
     id: "co-up",
@@ -87,6 +92,8 @@ export const projects: Project[] = [
       "Responsive PWA",
     ],
     type: "Coworking space reservation PWA",
+    image: "/projects/coup.webp",
+    logo: "/projects/coup-logo.webp",
   },
   {
     id: "inotex",
@@ -112,6 +119,7 @@ export const projects: Project[] = [
       "AI chatbot",
     ],
     type: "Event & networking PWA",
+    image: "/projects/inotex.webp",
   },
   {
     id: "project-5",
