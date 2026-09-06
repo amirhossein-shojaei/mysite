@@ -1,2 +1,67 @@
-import { SectionTitle } from '../../components/Shell'; import { profile } from '../../data/profile'; import { experience } from '../../data/experience'; import { skillGroups } from '../../data/skills'; import { projects } from '../../data/projects'; import { useLanguage } from '../../locales'
-export function Resume(){const {t}=useLanguage(); return <section className="page container resume"><div className="resume-head"><SectionTitle eyebrow={t('RESUME')} title={t('A concise view of my work.')}>{t('A replaceable online resume built from the same centralized data as this portfolio.')}</SectionTitle><a className="btn" href={profile.cvUrl}>{t('Download CV ↓')}</a></div><div className="resume-section"><p className="eyebrow">{t('PROFILE')}</p><p className="resume-profile">{t(profile.summary)}</p></div><div className="resume-two"><div><p className="eyebrow">{t('EXPERIENCE')}</p>{experience.map(e=><div className="resume-item" key={e.title}><strong>{t(e.title)}</strong><span>{e.company} · {e.period}</span></div>)}</div><div><p className="eyebrow">{t('SELECTED PROJECTS')}</p>{projects.filter(p=>p.featured).map(p=><div className="resume-item" key={p.id}><strong>{p.title}</strong><span>{t(p.type)}</span></div>)}</div></div><div className="resume-section"><p className="eyebrow">{t('SKILLS')}</p><div className="tags resume-tags">{skillGroups.flatMap(g=>g.core).map(s=><span key={s}>{t(s)}</span>)}</div></div><div className="placeholder-line">{t('Languages and additional resume details will be added later.')}</div></section>}
+import { SectionTitle } from "../../components/Shell";
+import { profile } from "../../data/profile";
+import { experience } from "../../data/experience";
+import { skillGroups } from "../../data/skills";
+import { projects } from "../../data/projects";
+import { useLanguage } from "../../locales";
+export function Resume() {
+  const { t } = useLanguage();
+  return (
+    <section className="page container resume">
+      <div className="resume-head">
+        <SectionTitle
+          eyebrow={t("RESUME")}
+          title={t("A concise view of my work.")}
+        >
+          {t(
+            "A replaceable online resume built from the same centralized data as this portfolio.",
+          )}
+        </SectionTitle>
+        <a className="btn" href={profile.cvUrl}>
+          {t("Download CV ↓")}
+        </a>
+      </div>
+      <div className="resume-section">
+        <p className="eyebrow">{t("PROFILE")}</p>
+        <p className="resume-profile">{t(profile.summary)}</p>
+      </div>
+      <div className="resume-two">
+        <div>
+          <p className="eyebrow">{t("EXPERIENCE")}</p>
+          {experience.map((e) => (
+            <div className="resume-item" key={e.title}>
+              <strong>{t(e.title)}</strong>
+              <span>
+                {e.company} · {e.period}
+              </span>
+            </div>
+          ))}
+        </div>
+        <div>
+          <p className="eyebrow">{t("SELECTED PROJECTS")}</p>
+          {projects
+            .filter((p) => p.featured)
+            .map((p) => (
+              <div className="resume-item" key={p.id}>
+                <strong>{p.title}</strong>
+                <span>{t(p.type)}</span>
+              </div>
+            ))}
+        </div>
+      </div>
+      <div className="resume-section">
+        <p className="eyebrow">{t("SKILLS")}</p>
+        <div className="tags resume-tags">
+          {skillGroups
+            .flatMap((g) => g.core)
+            .map((s) => (
+              <span key={s}>{t(s)}</span>
+            ))}
+        </div>
+      </div>
+      <div className="placeholder-line">
+        {t("Languages and additional resume details will be added later.")}
+      </div>
+    </section>
+  );
+}

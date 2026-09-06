@@ -1,1 +1,1 @@
-export * from './ScrollReveal'
+export * from "./ScrollReveal";

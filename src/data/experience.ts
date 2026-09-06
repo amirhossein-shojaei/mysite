@@ -1,1 +1,18 @@
-export const experience = [{ period:'11 Tir 1404 — Present', title:'Professional Software Development', company:'Javangan Lab-e Elm', location:'Pardis Technology Park, Iran', description:'Professional software development experience across real-world projects.' }, { period:'Current', title:'Freelance Full-Stack Developer', company:'Independent practice', location:'Remote', description:'Freelance software development across frontend, backend, AI-powered applications, PWAs, databases, and deployment.' }]
+export const experience = [
+  {
+    period: "11 Tir 1404 — Present",
+    title: "Professional Software Development",
+    company: "Javangan Lab-e Elm",
+    location: "Pardis Technology Park, Iran",
+    description:
+      "Professional software development experience across real-world projects.",
+  },
+  {
+    period: "Current",
+    title: "Freelance Full-Stack Developer",
+    company: "Independent practice",
+    location: "Remote",
+    description:
+      "Freelance software development across frontend, backend, AI-powered applications, PWAs, databases, and deployment.",
+  },
+];

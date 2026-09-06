@@ -1,2 +1,56 @@
-import { SectionTitle } from '../../components/Shell'; import { profile } from '../../data/profile'; import { useLanguage } from '../../locales'
-export function About(){const {t,language}=useLanguage(); return <section className="page container"><SectionTitle eyebrow={t('ABOUT ME')} title={t('A builder with a full-stack perspective.')}>{t('I care about the space between a clear interface and a dependable system.')}</SectionTitle><div className="about-grid"><div className="about-lead"><p>{language==='fa'?'من امیرحسین شجاعی، توسعه‌دهنده فول‌استک هستم و در حوزه فرانت‌اند، بک‌اند، ابزارهای توسعه هوش مصنوعی، پایگاه داده، دوآپس و PWA فعالیت می‌کنم.':`I’m ${profile.name}, a ${profile.title} working across frontend and backend technologies, AI development tools, databases, DevOps, and PWAs.`}</p><p>{t('My programming journey began approximately four years ago through learning and practice. I started my professional software development career on 11 Tir 1404, working on real-world products at Javangan Lab-e Elm in Pardis Technology Park, Iran.')}</p><p>{t('Today, I focus on building useful web applications and continue my work as a freelance full-stack developer.')}</p></div><div className="about-facts"><div><span>01</span><strong>{t('Professional focus')}</strong><p>{t('Full-stack web, PWA & AI-powered applications')}</p></div><div><span>02</span><strong>{t('Current chapter')}</strong><p>{t('Professional development + freelance software work')}</p></div><div><span>03</span><strong>{t('Based around')}</strong><p>{t('Frontend, backend, data, deployment, and AI integration')}</p></div></div></div></section>}
+import { SectionTitle } from "../../components/Shell";
+import { profile } from "../../data/profile";
+import { useLanguage } from "../../locales";
+export function About() {
+  const { t, language } = useLanguage();
+  return (
+    <section className="page container">
+      <SectionTitle
+        eyebrow={t("ABOUT ME")}
+        title={t("A builder with a full-stack perspective.")}
+      >
+        {t(
+          "I care about the space between a clear interface and a dependable system.",
+        )}
+      </SectionTitle>
+      <div className="about-grid">
+        <div className="about-lead">
+          <p>
+            {language === "fa"
+              ? "من امیرحسین شجاعی، توسعه‌دهنده فول‌استک هستم و در حوزه فرانت‌اند، بک‌اند، ابزارهای توسعه هوش مصنوعی، پایگاه داده، دوآپس و PWA فعالیت می‌کنم."
+              : `I’m ${profile.name}, a ${profile.title} working across frontend and backend technologies, AI development tools, databases, DevOps, and PWAs.`}
+          </p>
+          <p>
+            {t(
+              "My programming journey began approximately four years ago through learning and practice. I started my professional software development career on 11 Tir 1404, working on real-world products at Javangan Lab-e Elm in Pardis Technology Park, Iran.",
+            )}
+          </p>
+          <p>
+            {t(
+              "Today, I focus on building useful web applications and continue my work as a freelance full-stack developer.",
+            )}
+          </p>
+        </div>
+        <div className="about-facts">
+          <div>
+            <span>01</span>
+            <strong>{t("Professional focus")}</strong>
+            <p>{t("Full-stack web, PWA & AI-powered applications")}</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>{t("Current chapter")}</strong>
+            <p>{t("Professional development + freelance software work")}</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>{t("Based around")}</strong>
+            <p>
+              {t("Frontend, backend, data, deployment, and AI integration")}
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

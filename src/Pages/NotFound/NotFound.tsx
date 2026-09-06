@@ -1,1 +1,18 @@
-import { Link } from 'react-router-dom'; import { useLanguage } from '../../locales'; export function NotFound(){const {t}=useLanguage(); return <section className="not-found container"><p className="giant">404</p><p className="eyebrow">{t('NOT FOUND')}</p><h1>{t('Page Not Found')}</h1><p className="muted">{t('The page you’re looking for doesn’t exist or has moved.')}</p><Link className="btn" to="/">{t('Back to Home ↗')}</Link></section>}
+import { Link } from "react-router-dom";
+import { useLanguage } from "../../locales";
+export function NotFound() {
+  const { t } = useLanguage();
+  return (
+    <section className="not-found container">
+      <p className="giant">404</p>
+      <p className="eyebrow">{t("NOT FOUND")}</p>
+      <h1>{t("Page Not Found")}</h1>
+      <p className="muted">
+        {t("The page you’re looking for doesn’t exist or has moved.")}
+      </p>
+      <Link className="btn" to="/">
+        {t("Back to Home ↗")}
+      </Link>
+    </section>
+  );
+}
