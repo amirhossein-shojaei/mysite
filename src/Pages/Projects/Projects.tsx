@@ -8,7 +8,7 @@ export function Projects() {
     <section className="page container">
       <SectionTitle
         eyebrow={t("PROJECT ARCHIVE")}
-        title={t("Five projects, one growing practice.")}
+        title={t("Four projects, one growing practice.")}
       >
         {t(
           "Real project work, presented with context and without exaggeration.",

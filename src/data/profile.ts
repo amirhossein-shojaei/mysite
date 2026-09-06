@@ -12,8 +12,8 @@ export const profile = {
   cvUrl: "#",
   stats: [
     { value: "1+ ", label: "Year professional experience" },
-    { value: "5 ", label: "Completed projects" },
+    { value: "4 ", label: "Completed projects" },
     { value: "4 ", label: "Years learning & practicing" },
-    { value: "5 ", label: "PWA projects" },
+    { value: "4 ", label: "PWA projects" },
   ],
 };

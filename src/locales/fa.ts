@@ -30,8 +30,8 @@ const content: Record<string, string> = {
   "Read more about me": "بیشتر درباره من",
   "04 / SELECTED WORK": "۰۴ / پروژه‌های منتخب",
   "Built for the real world.": "ساخته‌شده برای دنیای واقعی.",
-  "Five completed applications. Four detailed case studies. Every link leads somewhere real.":
-    "پنج اپلیکیشن تکمیل‌شده و چهار مطالعه موردی دقیق؛ هر لینک به یک مقصد واقعی می‌رسد.",
+  "Four completed applications with real case studies. Every link leads somewhere real.":
+    "چهار اپلیکیشن تکمیل‌شده با مطالعه‌های موردی واقعی؛ هر لینک به یک مقصد واقعی می‌رسد.",
   "Explore all projects": "مشاهده همه پروژه‌ها",
   "05 / WHAT I BUILD": "۰۵ / چیزهایی که می‌سازم",
   "The layers behind a product.": "لایه‌های یک محصول کامل.",
@@ -185,7 +185,7 @@ const content: Record<string, string> = {
     "به ترکیب متفاوتی از مهارت‌ها نیاز دارید؟",
   "Tell me about it ↗": "درباره پروژه بگویید ←",
   "PROJECT ARCHIVE": "آرشیو پروژه‌ها",
-  "Five projects, one growing practice.": "پنج پروژه، یک مسیر رو به رشد.",
+  "Four projects, one growing practice.": "چهار پروژه، یک مسیر رو به رشد.",
   "Real project work, presented with context and without exaggeration.":
     "تجربه واقعی پروژه‌ها، با زمینه کافی و بدون اغراق.",
   "Project not found.": "پروژه پیدا نشد.",

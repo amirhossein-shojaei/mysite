@@ -160,7 +160,7 @@ export function Home() {
           title={text("Built for the real world.")}
         >
           {text(
-            "Five completed applications. Four detailed case studies. Every link leads somewhere real.",
+            "Four completed applications with real case studies. Every link leads somewhere real.",
           )}
         </SectionTitle>
         <div className="project-grid">

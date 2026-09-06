@@ -121,18 +121,4 @@ export const projects: Project[] = [
     type: "Event & networking PWA",
     image: "/projects/inotex.webp",
   },
-  {
-    id: "project-5",
-    title: "Project #5",
-    description: "Details coming soon.",
-    category: "Coming soon",
-    technologies: [],
-    status: "Details Coming Soon",
-    client: later,
-    problem: later,
-    solution: later,
-    contribution: later,
-    features: [],
-    type: "Details coming soon",
-  },
 ];

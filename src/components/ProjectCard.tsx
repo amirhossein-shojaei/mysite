@@ -14,64 +14,6 @@ export function ProjectCard({
   const text = (value: string) => t(value);
   const arrow = language === "fa" ? "←" : "→";
   const base = import.meta.env.BASE_URL;
-  const preview =
-    project.id === "elixia" ? (
-      <>
-        <strong>{language === "fa" ? "تمرین امروز" : "Today's Workout"}</strong>
-        <b>🔥 {language === "fa" ? "سینه و پشت بازو" : "Chest & Triceps"}</b>
-        <span>
-          {language === "fa" ? "برنامه تغذیه" : "Nutrition Plan"}{" "}
-          <em>2,340 kcal</em>
-        </span>
-      </>
-    ) : project.id === "co-up" ? (
-      <>
-        <strong>
-          {language === "fa" ? "صندلی‌های خالی" : "Available Seats"}
-        </strong>
-        <b>A12　 A13　 A14</b>
-        <span>
-          {language === "fa" ? "اتاق جلسه" : "Meeting Room"}{" "}
-          <em>
-            {language === "fa" ? "اتاق ۰۲ · موجود" : "Room 02 · Available"}
-          </em>
-        </span>
-      </>
-    ) : project.id === "inotex" ? (
-      <>
-        <strong>INOTEX</strong>
-        <b>
-          {language === "fa"
-            ? "غرفه‌داران　 رویدادها　 شرکت‌ها"
-            : "Exhibitors　 Events　 Companies"}
-        </b>
-        <span>
-          {language === "fa" ? "دستیار هوشمند" : "Ask AI Assistant"}{" "}
-          <em>
-            {language === "fa" ? "هر سوالی دارید بپرسید ←" : "Ask anything →"}
-          </em>
-        </span>
-      </>
-    ) : project.id === "oiec" ? (
-      <>
-        <strong>{language === "fa" ? "موجودی" : "Inventory"}</strong>
-        <b>
-          {language === "fa" ? "کد قدیمی　←　کد جدید" : "Old Code　→　New Code"}
-        </b>
-        <span>
-          {language === "fa" ? "تبدیل هوشمند" : "AI Transformation"}{" "}
-          <em>{language === "fa" ? "در حال پردازش..." : "Processing..."}</em>
-        </span>
-      </>
-    ) : (
-      <>
-        <strong>{language === "fa" ? "پروژه شماره ۵" : "Project #5"}</strong>
-        <b>{text("Details coming soon.")}</b>
-        <span>
-          {text("Project Preview")} <em>—</em>
-        </span>
-      </>
-    );
   return (
     <article className="project-card">
       <div className="card-top">
@@ -84,33 +26,21 @@ export function ProjectCard({
       </div>
       <div className={`project-art art-${project.id}`}>
         <span className="preview-label">{text("PROJECT PREVIEW")}</span>
-        {project.image ? (
-          <>
-            <img
-              className="project-shot"
-              src={`${base}${project.image}`}
-              alt={project.title}
-              loading="lazy"
-            />
-            {project.logo && (
-              <img
-                className="project-logo"
-                src={`${base}${project.logo}`}
-                alt={`${project.title} logo`}
-                loading="lazy"
-              />
-            )}
-          </>
-        ) : (
-          <div className="mock-window">
-            <div className="mock-bar">
-              <i />
-              <i />
-              <i />
-              <b>{project.title}</b>
-            </div>
-            <div className="mock-content">{preview}</div>
-          </div>
+        {project.image && (
+          <img
+            className="project-shot"
+            src={`${base}${project.image}`}
+            alt={project.title}
+            loading="lazy"
+          />
+        )}
+        {project.logo && (
+          <img
+            className="project-logo"
+            src={`${base}${project.logo}`}
+            alt={`${project.title} logo`}
+            loading="lazy"
+          />
         )}
       </div>
       <p className="eyebrow">{text(project.category)}</p>

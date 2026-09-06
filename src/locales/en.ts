@@ -30,7 +30,7 @@ export const en = {
     work: "04 / SELECTED WORK",
     workTitle: "Built for the real world.",
     workText:
-      "Five completed applications. Four detailed case studies. Every link leads somewhere real.",
+      "Four completed applications with real case studies. Every link leads somewhere real.",
     allProjects: "Explore all projects",
     build: "05 / WHAT I BUILD",
     buildTitle: "The layers behind a product.",

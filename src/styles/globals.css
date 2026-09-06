@@ -519,7 +519,7 @@ textarea {
   margin-right: 5px;
 }
 .project-art {
-  height: 190px;
+  height: 235px;
   margin: 20px 0;
   background: linear-gradient(135deg, #233035, #12181a);
   border: 1px solid #3a4a4a;
@@ -628,9 +628,6 @@ textarea {
 }
 .art-oiec {
   background: linear-gradient(135deg, #302d27, #171819);
-}
-.art-project-5 {
-  background: linear-gradient(135deg, #202628, #151718);
 }
 .project-card h3 {
   font-size: 29px;
@@ -1096,7 +1093,7 @@ textarea {
   align-items: flex-end;
 }
 .detail-art {
-  height: 340px;
+  height: 400px;
   margin: 60px 0;
   background: linear-gradient(135deg, #233035, #12181a);
   border: 1px solid #3a4a4a;
@@ -1368,7 +1365,7 @@ textarea {
     align-items: flex-start;
   }
   .detail-art {
-    height: 240px;
+    height: 280px;
     margin: 38px 0;
   }
   .detail-art span {
@@ -1422,7 +1419,7 @@ textarea {
     padding: 16px;
   }
   .project-art {
-    height: 165px;
+    height: 200px;
   }
   .project-card h3 {
     font-size: 25px;
