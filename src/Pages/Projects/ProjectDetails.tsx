@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { projects } from "../../data/projects";
 import { ArrowLink, SectionTitle } from "../../components/Shell";
@@ -8,6 +9,9 @@ export function ProjectDetails() {
   const base = import.meta.env.BASE_URL;
   const p = projects.find((x) => x.id === id);
   const arrow = language === "fa" ? "←" : "→";
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "auto" });
+  }, [id]);
   if (!p)
     return (
       <section className="page container">

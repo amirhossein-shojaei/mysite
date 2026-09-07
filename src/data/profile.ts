@@ -14,6 +14,5 @@ export const profile = {
     { value: "1+ ", label: "Year professional experience" },
     { value: "4 ", label: "Completed projects" },
     { value: "4 ", label: "Years learning & practicing" },
-    { value: "4 ", label: "PWA projects" },
   ],
 };

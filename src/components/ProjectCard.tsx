@@ -10,7 +10,7 @@ export function ProjectCard({
   project: Project;
   index: number;
 }) {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
   const text = (value: string) => t(value);
   const base = import.meta.env.BASE_URL;
   const navigate = useNavigate();
@@ -68,12 +68,12 @@ export function ProjectCard({
             )}
           </ArrowLink>
         )}
+        {project.organizationUrl && (
+          <ArrowLink className="card-action" href={project.organizationUrl}>
+            {text("Official Website")}
+          </ArrowLink>
+        )}
       </div>
-      {project.organizationUrl && (
-        <ArrowLink className="card-action" href={project.organizationUrl}>
-          {text("Official Website")}
-        </ArrowLink>
-      )}
     </article>
   );
 }

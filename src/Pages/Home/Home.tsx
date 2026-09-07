@@ -71,9 +71,6 @@ export function Home() {
       <section className="hero container">
         <div className="hero-copy">
           <p className="eyebrow">
-            {language === "fa"
-              ? "۰۱ / پورتفولیوی شخصی"
-              : "01 / PERSONAL PORTFOLIO"}{" "}
             <span className="dot pulse" />{" "}
             {language === "fa"
               ? "آماده همکاری فریلنسری"
@@ -166,9 +163,8 @@ export function Home() {
         <div className="container strip-inner">
           <span className="strip-label">{text("CAPABILITIES")}</span>
           {["Frontend", "Backend", "AI", "PWA", "Database", "DevOps"].map(
-            (x, i) => (
+            (x) => (
               <span className="capability" key={x}>
-                <b>0{i + 1}</b>
                 {text(x)}
               </span>
             ),
@@ -176,12 +172,12 @@ export function Home() {
         </div>
       </section>
       <section className="marquee-section">
-        <Marquee label="TECH / 01" items={tech} />
-        <Marquee label="AI + TOOLS / 02" items={ai} reverse />
+        <Marquee label="TECH" items={tech} />
+        <Marquee label="AI + TOOLS" items={ai} reverse />
       </section>
       <ScrollReveal>
         <section className="section intro-section container">
-          <div className="section-kicker">{text("03 / THE SHORT VERSION")}</div>
+          <div className="section-kicker">{text("THE SHORT VERSION")}</div>
           <div className="split-intro">
             <div>
               <h2>{text("I turn ideas into useful software.")}</h2>
@@ -201,7 +197,7 @@ export function Home() {
       </ScrollReveal>
       <section className="section projects-section container">
         <SectionTitle
-          eyebrow={text("04 / SELECTED WORK")}
+          eyebrow={text("SELECTED WORK")}
           title={text("Built for the real world.")}
         >
           {text(
@@ -224,36 +220,28 @@ export function Home() {
       <ScrollReveal>
         <section className="section build-section container">
           <SectionTitle
-            eyebrow={text("05 / WHAT I BUILD")}
+            eyebrow={text("WHAT I BUILD")}
             title={text("The layers behind a product.")}
           />
           <div className="build-grid">
             {[
               [
-                "01",
                 "Full-Stack Applications",
                 "Interfaces and systems that work together.",
               ],
               [
-                "02",
                 "Progressive Web Apps",
                 "Fast, responsive, installable experiences.",
               ],
+              ["AI-powered Applications", "Useful AI integrations, not hype."],
               [
-                "03",
-                "AI-powered Applications",
-                "Useful AI integrations, not hype.",
-              ],
-              [
-                "04",
                 "Deployment-ready Systems",
                 "Docker, servers, and production delivery.",
               ],
-            ].map((x) => (
+            ].map((x, i) => (
               <div className="build-item" key={x[0]}>
-                <span>{x[0]}</span>
-                <h3>{text(x[1])}</h3>
-                <p className="muted">{text(x[2])}</p>
+                <h3>{text(x[0])}</h3>
+                <p className="muted">{text(x[1])}</p>
               </div>
             ))}
           </div>
@@ -261,12 +249,11 @@ export function Home() {
       </ScrollReveal>
       <section className="process-band">
         <div className="container">
-          <div className="section-kicker">{text("06 / HOW I WORK")}</div>
+          <div className="section-kicker">{text("HOW I WORK")}</div>
           <div className="process">
-            {["Understand", "Plan", "Build", "Test", "Deploy"].map((x, i) => (
+            {["Understand", "Plan", "Build", "Test", "Deploy"].map((x) => (
               <div key={x}>
                 <strong>{text(x)}</strong>
-                <span>0{i + 1}</span>
               </div>
             ))}
           </div>
@@ -275,7 +262,7 @@ export function Home() {
       <section className="cta-band">
         <div className="container cta-inner">
           <div>
-            <p className="eyebrow">{text("07 / NEXT STEP")}</p>
+            <p className="eyebrow">{text("NEXT STEP")}</p>
             <h2>{text("Have a project in mind?")}</h2>
             <p className="muted">
               {text("Let’s build something useful together.")}
