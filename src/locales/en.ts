@@ -10,7 +10,7 @@ export const en = {
     contact: "Contact",
   },
   hero: {
-    eyebrow: "01 / PERSONAL PORTFOLIO",
+    eyebrow: "AVAILABLE FOR FREELANCE",
     availability: "AVAILABLE FOR FREELANCE",
     name: "Amirhossein Shojaei",
     summary:
@@ -46,7 +46,6 @@ export const en = {
     pro: "01+ YEAR PRO",
     preview: "PROJECT PREVIEW",
     status: "Completed",
-    caseStudy: "View Case Study",
     openProject: "Open Project",
     openApp: "Open Application",
     clientWebsite: "Client Website",
