@@ -148,13 +148,15 @@ export function SectionTitle({
 export function ArrowLink({
   href,
   children,
+  className,
 }: {
   href: string;
   children: ReactNode;
+  className?: string;
 }) {
   return (
     <a
-      className="arrow-link"
+      className={className ? `arrow-link ${className}` : "arrow-link"}
       href={href}
       target="_blank"
       rel="noopener noreferrer"

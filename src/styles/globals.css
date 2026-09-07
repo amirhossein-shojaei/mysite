@@ -276,11 +276,59 @@ textarea {
   font-size: 11px;
   font-weight: 700;
   margin-left: 9px;
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  background: transparent;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
 }
 .download:hover,
 .text-link:hover,
 .arrow-link:hover {
   color: var(--accent);
+}
+.download:hover {
+  border-color: var(--accent-hover);
+  background: color-mix(in srgb, var(--panel-2) 60%, transparent);
+}
+.resume-dropdown {
+  position: relative;
+}
+.resume-menu {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: 10;
+  min-width: 160px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.22);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.resume-menu a {
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 9px 12px;
+  border-radius: 8px;
+  transition: background 0.15s;
+  white-space: nowrap;
+}
+.resume-menu a:hover {
+  background: var(--panel-2);
+  color: var(--accent);
+}
+.site:dir(rtl) .resume-menu {
+  left: auto;
+  right: 0;
 }
 .social-row {
   display: flex;
@@ -490,6 +538,10 @@ textarea {
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 7px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   transition:
     transform 0.25s,
     border-color 0.25s,
@@ -661,9 +713,11 @@ textarea {
 }
 .card-links {
   display: flex;
-  gap: 18px;
+  gap: 12px;
   align-items: center;
-  margin-top: 22px;
+  flex-wrap: wrap;
+  margin-top: auto;
+  padding-top: 22px;
 }
 .text-link,
 .arrow-link {
@@ -673,7 +727,19 @@ textarea {
 .arrow-link {
   display: inline-block;
   color: var(--accent);
-  margin-top: 10px;
+}
+.card-action {
+  border: 1px solid var(--line);
+  border-radius: 1rem;
+  padding: 8px 12px;
+  transition:
+    border-color 0.2s,
+    color 0.2s,
+    background 0.2s;
+}
+.card-action:hover {
+  border-color: var(--accent-hover);
+  background: color-mix(in srgb, var(--panel-2) 60%, transparent);
 }
 .view-all {
   display: inline-block;

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { Project } from "../data/projects";
 import { ArrowLink } from "./Shell";
 import { useLanguage } from "../locales";
@@ -12,10 +12,15 @@ export function ProjectCard({
 }) {
   const { t, language } = useLanguage();
   const text = (value: string) => t(value);
-  const arrow = language === "fa" ? "←" : "→";
   const base = import.meta.env.BASE_URL;
+  const navigate = useNavigate();
+  const goToDetail = (e: React.MouseEvent<HTMLElement>) => {
+    if (!(e.target as HTMLElement).closest("a, button")) {
+      navigate(`/projects/${project.id}`);
+    }
+  };
   return (
-    <article className="project-card">
+    <article className="project-card" onClick={goToDetail}>
       <div className="card-top">
         <span className="project-number">
           {String(index + 1).padStart(2, "0")}
@@ -52,11 +57,8 @@ export function ProjectCard({
         ))}
       </div>
       <div className="card-links">
-        <Link className="text-link" to={`/projects/${project.id}`}>
-          {text("View Case Study")} <span>{arrow}</span>
-        </Link>
         {project.projectUrl && (
-          <ArrowLink href={project.projectUrl}>
+          <ArrowLink className="card-action" href={project.projectUrl}>
             {text(
               project.id === "elixia"
                 ? "Open Project"
@@ -68,7 +70,7 @@ export function ProjectCard({
         )}
       </div>
       {project.organizationUrl && (
-        <ArrowLink href={project.organizationUrl}>
+        <ArrowLink className="card-action" href={project.organizationUrl}>
           {text("Official Website")}
         </ArrowLink>
       )}

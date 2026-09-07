@@ -7,6 +7,8 @@ const content: Record<string, string> = {
   "View Projects": "مشاهده پروژه‌ها",
   "Contact Me": "ارتباط با من",
   "Download Resume": "دانلود رزومه",
+  "Persian Resume": "رزومه فارسی",
+  "English Resume": "رزومه انگلیسی",
   "Find me at": "راه‌های ارتباطی",
   "SYSTEM ONLINE": "سیستم فعال است",
   CAPABILITIES: "توانمندی‌ها",

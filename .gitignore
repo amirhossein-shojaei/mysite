@@ -13,4 +13,4 @@ configs
 node_logs
 mongo_data
 dist
-minio_data/
+minio_data/.venv/
