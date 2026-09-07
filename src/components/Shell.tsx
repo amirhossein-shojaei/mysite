@@ -133,13 +133,15 @@ export function SectionTitle({
   title,
   children,
 }: {
-  eyebrow: string;
+  eyebrow: ReactNode;
   title: string;
   children?: ReactNode;
 }) {
   return (
     <div className="section-title">
-      <p className="eyebrow">{eyebrow}</p>
+      <p className="eyebrow">
+        <span className="dot pulse" /> {eyebrow}
+      </p>
       <h2>{title}</h2>
       {children && <p className="muted intro">{children}</p>}
     </div>

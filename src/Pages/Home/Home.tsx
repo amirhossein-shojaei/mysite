@@ -161,7 +161,9 @@ export function Home() {
       </section>
       <section className="capability-strip mt-4">
         <div className="container strip-inner">
-          <span className="strip-label">{text("CAPABILITIES")}</span>
+          <span className="strip-label">
+            <span className="dot pulse" /> {text("CAPABILITIES")}
+          </span>
           {["Frontend", "Backend", "AI", "PWA", "Database", "DevOps"].map(
             (x) => (
               <span className="capability" key={x}>
@@ -177,7 +179,9 @@ export function Home() {
       </section>
       <ScrollReveal>
         <section className="section intro-section container">
-          <div className="section-kicker">{text("THE SHORT VERSION")}</div>
+          <div className="section-kicker">
+            <span className="dot pulse" /> {text("THE SHORT VERSION")}
+          </div>
           <div className="split-intro">
             <div>
               <h2>{text("I turn ideas into useful software.")}</h2>
@@ -249,7 +253,9 @@ export function Home() {
       </ScrollReveal>
       <section className="process-band">
         <div className="container">
-          <div className="section-kicker">{text("HOW I WORK")}</div>
+          <div className="section-kicker">
+            <span className="dot pulse" /> {text("HOW I WORK")}
+          </div>
           <div className="process">
             {["Understand", "Plan", "Build", "Test", "Deploy"].map((x) => (
               <div key={x}>
@@ -262,7 +268,9 @@ export function Home() {
       <section className="cta-band">
         <div className="container cta-inner">
           <div>
-            <p className="eyebrow">{text("NEXT STEP")}</p>
+            <p className="eyebrow">
+              <span className="dot pulse" /> {text("NEXT STEP")}
+            </p>
             <h2>{text("Have a project in mind?")}</h2>
             <p className="muted">
               {text("Let’s build something useful together.")}
