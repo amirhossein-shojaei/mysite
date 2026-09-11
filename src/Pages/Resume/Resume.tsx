@@ -28,12 +28,10 @@ export function Resume() {
       <div className="resume-two">
         <div>
           <p className="eyebrow">{t("EXPERIENCE")}</p>
-          {experience.map((e) => (
+          {experience.items.map((e) => (
             <div className="resume-item" key={e.title[language]}>
               <strong>{e.title[language]}</strong>
-              <span>
-                {e.company[language]} · {e.period[language]}
-              </span>
+              {e.subtitle && <span>{e.subtitle[language]}</span>}
             </div>
           ))}
         </div>
