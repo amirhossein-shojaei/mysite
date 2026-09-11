@@ -58,7 +58,7 @@ export const experience: ExperienceData = {
   ],
   items: [
     {
-      number: "۰۱",
+      number: "۱",
       title: {
         en: "Professional Software Development",
         fa: "توسعه نرم‌افزار حرفه‌ای",
@@ -87,7 +87,7 @@ export const experience: ExperienceData = {
       ],
     },
     {
-      number: "۰۲",
+      number: "۲",
       title: {
         en: "Elixia",
         fa: "Elixia",
@@ -124,7 +124,7 @@ export const experience: ExperienceData = {
       },
     },
     {
-      number: "۰۳",
+      number: "۳",
       title: {
         en: "OIEC",
         fa: "OIEC",
@@ -165,7 +165,7 @@ export const experience: ExperienceData = {
       },
     },
     {
-      number: "۰۴",
+      number: "۴",
       title: {
         en: "Co-UP",
         fa: "Co-UP",
@@ -210,7 +210,7 @@ export const experience: ExperienceData = {
       },
     },
     {
-      number: "۰۵",
+      number: "۵",
       title: {
         en: "INOTEX",
         fa: "INOTEX",

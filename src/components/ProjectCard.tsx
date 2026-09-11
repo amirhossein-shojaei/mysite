@@ -23,7 +23,7 @@ export function ProjectCard({
     <article className="project-card" onClick={goToDetail}>
       <div className="card-top">
         <span className="project-number">
-          {String(index + 1).padStart(2, "0")}
+          {index + 1}
         </span>
         <span className="status">
           <i /> {text(project.status)}

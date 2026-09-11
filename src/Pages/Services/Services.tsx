@@ -1,34 +1,49 @@
 import { SectionTitle, Button } from "../../components/Shell";
-import { services } from "../../data/services";
+import { services, servicesContent } from "../../data/services";
 import { useLanguage } from "../../locales";
+
 export function Services() {
-  const { t } = useLanguage();
+  const { language } = useLanguage();
+  const txt = (value: { en: string; fa: string }) => value[language];
+
   return (
     <section className="page container">
       <SectionTitle
-        eyebrow={t("WHAT I DO")}
-        title={t("From first interface to production.")}
+        eyebrow={txt(servicesContent.eyebrow)}
+        title={txt(servicesContent.title)}
       >
-        {t(
-          "Flexible full-stack support for products that need both thoughtful development and practical delivery.",
-        )}
+        {txt(servicesContent.subtitle)}
       </SectionTitle>
       <div className="services-grid">
-        {services.map((s, i) => (
-          <article className="service" key={s}>
-            <span className="service-no">0{i + 1}</span>
-            <h2>{t(s)}</h2>
-            <p className="muted">
-              {t(
-                "A practical, capability-led service shaped around the needs of your project.",
-              )}
-            </p>
+        {services.map((service, i) => (
+          <article className="service" key={service.title.en}>
+            <span className="service-no">{i + 1}</span>
+            <h2>{txt(service.title)}</h2>
+            <p className="muted">{txt(service.description)}</p>
+            {service.body.map((paragraph, paragraphIndex) => (
+              <p key={paragraphIndex}>
+                {txt(paragraph)
+                  .split("\n")
+                  .map((line, lineIndex, lines) => (
+                    <span key={lineIndex}>
+                      {line}
+                      {lineIndex < lines.length - 1 && <br />}
+                    </span>
+                  ))}
+              </p>
+            ))}
           </article>
         ))}
       </div>
       <div className="service-end">
-        <p>{t("Need a different combination of skills?")}</p>
-        <Button to="/contact">{t("Tell me about it ↗")}</Button>
+        <div>
+          <p>
+            <strong>{txt(servicesContent.ctaTitle)}</strong>
+          </p>
+          <p>{txt(servicesContent.ctaDescription)}</p>
+          <p>{txt(servicesContent.ctaBody)}</p>
+        </div>
+        <Button to="/contact">{txt(servicesContent.cta)} </Button>
       </div>
     </section>
   );

@@ -42,8 +42,8 @@ export const en = {
   },
   common: {
     online: "SYSTEM ONLINE",
-    years: "04 YEARS LEARNING",
-    pro: "01+ YEAR PRO",
+    years: "4 YEARS LEARNING",
+    pro: "1+ YEAR PRO",
     preview: "PROJECT PREVIEW",
     status: "Completed",
     openProject: "Open Project",

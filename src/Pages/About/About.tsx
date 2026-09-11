@@ -1,5 +1,6 @@
 import { SectionTitle } from "../../components/Shell";
 import { about } from "../../data/about";
+import { ScrollReveal } from "../../components/ScrollReveal";
 import { useLanguage } from "../../locales";
 
 export function About() {
@@ -59,13 +60,15 @@ export function About() {
         <h2>{txt(about.timeline.title)}</h2>
         <div className="timeline">
           {about.timeline.items.map((item, index) => (
-            <div className="timeline-item" key={index}>
-              <div className="timeline-marker">0{index + 1}</div>
-              <div>
-                <h3>{txt(item.title)}</h3>
-                <p>{txt(item.description)}</p>
+            <ScrollReveal key={index} delay={index * 100}>
+              <div className="timeline-item">
+                <div className="timeline-marker">{index + 1}</div>
+                <div>
+                  <h3>{txt(item.title)}</h3>
+                  <p>{txt(item.description)}</p>
+                </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
