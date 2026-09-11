@@ -35,7 +35,7 @@ export function Shell({ children }: { children: ReactNode }) {
         <nav className="nav container">
           <Link to="/" className="brand" onClick={() => setOpen(false)}>
             <span className="brand-mark">AS</span>
-            <span>{profile.name}</span>
+            <span>{profile.name[language]}</span>
           </Link>
           <div className="header-controls">
             <div className="language-switch" aria-label={t("language.switch")}>
@@ -82,7 +82,7 @@ export function Shell({ children }: { children: ReactNode }) {
           <div>
             <Link to="/" className="brand">
               <span className="brand-mark">AS</span>
-              <span>{profile.name}</span>
+              <span>{profile.name[language]}</span>
             </Link>
             <p className="muted footer-copy">
               {language === "fa"
@@ -101,12 +101,42 @@ export function Shell({ children }: { children: ReactNode }) {
             <a href={`mailto:${profile.email}`} aria-label={t("Email")}>
               {t("Email")} ↗
             </a>
-            <span>{profile.github}</span>
-            <span>{profile.linkedin}</span>
+            <a
+              href={profile.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("GitHub")}
+            >
+              GitHub ↗
+            </a>
+            <a
+              href={profile.linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("LinkedIn")}
+            >
+              LinkedIn ↗
+            </a>
+            <a
+              href={profile.telegramUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("Telegram")}
+            >
+              Telegram ↗
+            </a>
+            <a
+              href={profile.baleUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={t("Bale")}
+            >
+              Bale ↗
+            </a>
           </div>
         </div>
         <div className="container copyright">
-          © 2026 {profile.name}.{" "}
+          © 2026 {profile.name[language]}.{" "}
           {language === "fa" ? "تمامی حقوق محفوظ است." : "All rights reserved."}
         </div>
       </footer>

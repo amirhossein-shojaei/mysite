@@ -226,8 +226,12 @@ const content: Record<string, string> = {
   "Tell me a little about your project...": "کمی درباره پروژه خود بگویید...",
   "Send message ↗": "ارسال پیام ←",
   "DIRECT CHANNELS": "راه‌های ارتباطی",
-  "Contact details are placeholders until the real channels are provided.":
-    "اطلاعات تماس تا زمان ارائه راه‌های واقعی، به‌صورت جایگزین نمایش داده می‌شوند.",
+  GitHub: "گیت‌هاب",
+  LinkedIn: "لینکدین",
+  Telegram: "تلگرام",
+  Bale: "بله",
+  "Reach out through any of these channels. I usually respond within a day.":
+    "از هر یک از این راه‌ها با من در تماس باشید. معمولاً ظرف یک روز پاسخ می‌دهم.",
   "NOT FOUND": "یافت نشد",
   "Page Not Found": "صفحه پیدا نشد",
   "The page you’re looking for doesn’t exist or has moved.":

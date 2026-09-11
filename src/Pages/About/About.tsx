@@ -17,8 +17,8 @@ export function About() {
         <div className="about-lead">
           <p>
             {language === "fa"
-              ? "من امیرحسین شجاعی، توسعه‌دهنده فول‌استک هستم و در حوزه فرانت‌اند، بک‌اند، ابزارهای توسعه هوش مصنوعی، پایگاه داده، دوآپس و PWA فعالیت می‌کنم."
-              : `I’m ${profile.name}, a ${profile.title} working across frontend and backend technologies, AI development tools, databases, DevOps, and PWAs.`}
+              ? `من ${profile.name.fa}، توسعه‌دهنده فول‌استک هستم و در حوزه فرانت‌اند، بک‌اند، ابزارهای توسعه هوش مصنوعی، پایگاه داده، دوآپس و PWA فعالیت می‌کنم.`
+              : `I’m ${profile.name.en}, a ${profile.title} working across frontend and backend technologies, AI development tools, databases, DevOps, and PWAs.`}
           </p>
           <p>
             {t(
@@ -33,17 +33,14 @@ export function About() {
         </div>
         <div className="about-facts">
           <div>
-            <span>01</span>
             <strong>{t("Professional focus")}</strong>
             <p>{t("Full-stack web, PWA & AI-powered applications")}</p>
           </div>
           <div>
-            <span>02</span>
             <strong>{t("Current chapter")}</strong>
             <p>{t("Professional development + freelance software work")}</p>
           </div>
           <div>
-            <span>03</span>
             <strong>{t("Based around")}</strong>
             <p>
               {t("Frontend, backend, data, deployment, and AI integration")}

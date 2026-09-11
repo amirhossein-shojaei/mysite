@@ -871,22 +871,13 @@ textarea {
   padding: 21px 0;
   border-bottom: 1px solid var(--line);
   display: grid;
-  grid-template-columns: 42px 1fr;
-  gap: 4px 15px;
-}
-.about-facts span,
-.service-no {
-  color: var(--accent);
-  font:
-    10px ui-monospace,
-    SFMono-Regular,
-    monospace;
+  grid-template-columns: 1fr;
+  gap: 4px;
 }
 .about-facts strong {
   font-size: 14px;
 }
 .about-facts p {
-  grid-column: 2;
   color: var(--muted);
   font-size: 12px;
   margin: 0;
@@ -1000,6 +991,11 @@ textarea {
 .service-no {
   display: block;
   margin-bottom: 35px;
+  color: var(--accent);
+  font:
+    10px ui-monospace,
+    SFMono-Regular,
+    monospace;
 }
 .service h2 {
   font-size: 23px;
@@ -1098,6 +1094,10 @@ textarea {
 }
 .contact-aside {
   border-top: 1px solid var(--line);
+  padding-top: 18px;
+}
+.contact-aside > .eyebrow {
+  margin-bottom: 10px;
 }
 .contact-aside > a,
 .contact-aside > div {
@@ -1415,14 +1415,26 @@ textarea {
     border-top: 1px solid var(--line);
   }
   .process {
-    grid-template-columns: repeat(5, 1fr);
-    overflow: hidden;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: visible;
   }
   .process div {
-    min-width: 112px;
+    min-width: auto;
+    padding: 18px 14px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .process div:nth-child(2n) {
+    border-right: 0;
+  }
+  .process div:nth-last-child(1):nth-child(odd) {
+    border-bottom: 0;
+  }
+  .process div:not(:first-child) {
+    padding-left: 14px;
   }
   .process-band {
-    overflow: hidden;
+    overflow: visible;
   }
   .cta-inner,
   .service-end,

@@ -5,7 +5,7 @@ import { skillGroups } from "../../data/skills";
 import { projects } from "../../data/projects";
 import { useLanguage } from "../../locales";
 export function Resume() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <section className="page container resume">
       <div className="resume-head">
@@ -29,10 +29,10 @@ export function Resume() {
         <div>
           <p className="eyebrow">{t("EXPERIENCE")}</p>
           {experience.map((e) => (
-            <div className="resume-item" key={e.title}>
-              <strong>{t(e.title)}</strong>
+            <div className="resume-item" key={e.title[language]}>
+              <strong>{e.title[language]}</strong>
               <span>
-                {e.company} · {e.period}
+                {e.company[language]} · {e.period[language]}
               </span>
             </div>
           ))}

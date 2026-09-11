@@ -76,9 +76,7 @@ export function Home() {
               ? "آماده همکاری فریلنسری"
               : "AVAILABLE FOR FREELANCE"}
           </p>
-          <p className="hero-name">
-            {language === "fa" ? "امیرحسین شجاعی" : "Amirhossein Shojaei"}
-          </p>
+          <p className="hero-name">{profile.name[language]}</p>
           <h1>
             {text(profile.title)}
             <br />

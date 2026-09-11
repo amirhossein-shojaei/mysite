@@ -77,19 +77,35 @@ export function Contact() {
           )}
         </form>
         <aside className="contact-aside">
-          <p className="eyebrow">{t("DIRECT CHANNELS")}</p>
+          <p className="eyebrow">
+            <span className="dot pulse" /> {t("DIRECT CHANNELS")}
+          </p>
           <a href={`mailto:${profile.email}`}>
             {t("Email")} <b>{profile.email}</b>
           </a>
-          <div>
+          <a href={profile.githubUrl} target="_blank" rel="noopener noreferrer">
             GitHub <b>{profile.github}</b>
-          </div>
-          <div>
+          </a>
+          <a
+            href={profile.linkedinUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             LinkedIn <b>{profile.linkedin}</b>
-          </div>
+          </a>
+          <a
+            href={profile.telegramUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Telegram <b>{profile.telegram}</b>
+          </a>
+          <a href={profile.baleUrl} target="_blank" rel="noopener noreferrer">
+            Bale <b>{profile.bale}</b>
+          </a>
           <p className="muted contact-note">
             {t(
-              "Contact details are placeholders until the real channels are provided.",
+              "Reach out through any of these channels. I usually respond within a day.",
             )}
           </p>
         </aside>

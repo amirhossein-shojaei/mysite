@@ -3,7 +3,7 @@ import { experience } from "../../data/experience";
 import { ScrollReveal } from "../../components/ScrollReveal";
 import { useLanguage } from "../../locales";
 export function Experience() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   return (
     <section className="page container">
       <SectionTitle
@@ -16,15 +16,15 @@ export function Experience() {
       </SectionTitle>
       <div className="timeline">
         {experience.map((item, i) => (
-          <ScrollReveal key={item.title} delay={i * 100}>
+          <ScrollReveal key={item.title[language]} delay={i * 100}>
             <div className="timeline-item">
               <div className="timeline-marker">0{i + 1}</div>
               <div>
-                <p className="eyebrow">{item.period}</p>
-                <h2>{t(item.title)}</h2>
-                <h3>{item.company}</h3>
-                <p className="muted">{t(item.location)}</p>
-                <p>{t(item.description)}</p>
+                <p className="eyebrow">{item.period[language]}</p>
+                <h2>{item.title[language]}</h2>
+                <h3>{item.company[language]}</h3>
+                <p className="muted">{item.location[language]}</p>
+                <p>{item.description[language]}</p>
               </div>
             </div>
           </ScrollReveal>
