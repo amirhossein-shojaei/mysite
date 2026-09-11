@@ -1,51 +1,84 @@
 import { SectionTitle } from "../../components/Shell";
-import { profile } from "../../data/profile";
+import { about } from "../../data/about";
 import { useLanguage } from "../../locales";
+
 export function About() {
-  const { t, language } = useLanguage();
+  const { language } = useLanguage();
+  const txt = (value: { en: string; fa: string }) => value[language];
+
   return (
     <section className="page container">
-      <SectionTitle
-        eyebrow={t("ABOUT ME")}
-        title={t("A builder with a full-stack perspective.")}
-      >
-        {t(
-          "I care about the space between a clear interface and a dependable system.",
-        )}
+      <SectionTitle eyebrow={txt(about.eyebrow)} title={txt(about.title)}>
+        {txt(about.subtitle)}
       </SectionTitle>
+
       <div className="about-grid">
         <div className="about-lead">
-          <p>
-            {language === "fa"
-              ? `من ${profile.name.fa}، توسعه‌دهنده فول‌استک هستم و در حوزه فرانت‌اند، بک‌اند، ابزارهای توسعه هوش مصنوعی، پایگاه داده، دوآپس و PWA فعالیت می‌کنم.`
-              : `I’m ${profile.name.en}, a ${profile.title} working across frontend and backend technologies, AI development tools, databases, DevOps, and PWAs.`}
-          </p>
-          <p>
-            {t(
-              "My programming journey began approximately four years ago through learning and practice. I started my professional software development career on 11 Tir 1404, working on real-world products at Javangan Lab-e Elm in Pardis Technology Park, Iran.",
-            )}
-          </p>
-          <p>
-            {t(
-              "Today, I focus on building useful web applications and continue my work as a freelance full-stack developer.",
-            )}
-          </p>
+          {about.intro.map((paragraph, index) => (
+            <p key={index}>{txt(paragraph)}</p>
+          ))}
         </div>
         <div className="about-facts">
-          <div>
-            <strong>{t("Professional focus")}</strong>
-            <p>{t("Full-stack web, PWA & AI-powered applications")}</p>
-          </div>
-          <div>
-            <strong>{t("Current chapter")}</strong>
-            <p>{t("Professional development + freelance software work")}</p>
-          </div>
-          <div>
-            <strong>{t("Based around")}</strong>
-            <p>
-              {t("Frontend, backend, data, deployment, and AI integration")}
-            </p>
-          </div>
+          {about.facts.map((fact, index) => (
+            <div key={index}>
+              <strong>{txt(fact.title)}</strong>
+              <p>{txt(fact.description)}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="about-section">
+        <h2>{txt(about.mindset.title)}</h2>
+        {about.mindset.paragraphs.map((paragraph, index) => (
+          <p key={index}>{txt(paragraph)}</p>
+        ))}
+      </div>
+
+      <div className="about-section">
+        <h2>{txt(about.focus.title)}</h2>
+        <div className="focus-grid">
+          {about.focus.items.map((item, index) => (
+            <div className="focus-card" key={index}>
+              <strong>{txt(item.title)}</strong>
+              <p>{txt(item.description)}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="about-section">
+        <h2>{txt(about.pursuit.title)}</h2>
+        <p className="about-tagline">{txt(about.pursuit.tagline)}</p>
+        {about.pursuit.paragraphs.map((paragraph, index) => (
+          <p key={index}>{txt(paragraph)}</p>
+        ))}
+      </div>
+
+      <div className="about-section">
+        <h2>{txt(about.timeline.title)}</h2>
+        <div className="timeline">
+          {about.timeline.items.map((item, index) => (
+            <div className="timeline-item" key={index}>
+              <div className="timeline-marker">0{index + 1}</div>
+              <div>
+                <h3>{txt(item.title)}</h3>
+                <p>{txt(item.description)}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div className="about-section">
+        <h2>{txt(about.skills.title)}</h2>
+        <div className="about-skills">
+          {about.skills.groups.map((group, index) => (
+            <div className="about-skill-group" key={index}>
+              <strong>{txt(group.category)}</strong>
+              <p>{group.skills}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

@@ -882,6 +882,74 @@ textarea {
   font-size: 12px;
   margin: 0;
 }
+.about-section {
+  margin-top: 85px;
+  max-width: 850px;
+}
+.about-section h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  letter-spacing: -0.04em;
+  margin: 0 0 26px;
+}
+.about-section > p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--muted);
+  margin: 0 0 18px;
+  max-width: 720px;
+}
+.about-tagline {
+  font-size: 18px;
+  color: var(--accent);
+  margin: 0 0 24px;
+  font-weight: 700;
+}
+.focus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.focus-card {
+  padding: 22px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+.focus-card strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.focus-card p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+.about-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+.about-skill-group {
+  padding: 20px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 7px;
+}
+.about-skill-group strong {
+  display: block;
+  font-size: 12px;
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-family: ui-monospace, SFMono-Regular, monospace;
+}
+.about-skill-group p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
 .timeline {
   max-width: 830px;
   border-left: 1px solid var(--line);
@@ -1482,7 +1550,7 @@ textarea {
   }
   .hero-code {
     right: 10px;
-    bottom: -30px;
+    bottom: -50px;
   }
   .social-row {
     margin-top: 48px;
@@ -1502,6 +1570,16 @@ textarea {
   .resume-two {
     grid-template-columns: 1fr;
     gap: 40px;
+  }
+  .about-section {
+    margin-top: 65px;
+  }
+  .focus-grid,
+  .about-skills {
+    grid-template-columns: 1fr;
+  }
+  .about-tagline {
+    font-size: 16px;
   }
   .section,
   .page {
