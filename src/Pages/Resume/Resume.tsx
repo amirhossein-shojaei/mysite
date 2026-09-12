@@ -152,7 +152,7 @@ export function Resume() {
         <div className="skills-grid">
           <article className="skill-group">
             <div className="skill-heading">
-              <h2>{language === "fa" ? "ابزارهای توسعه" : "Developer Tools"}</h2>
+              <h2>{txt(resume.tools.note)}</h2>
             </div>
             <div className="skill-list">
               {resume.tools.skills.split(" · ").map((skill) => (

@@ -92,12 +92,6 @@ export function Home() {
             </Button>
             <ResumeDropdown text={text} />
           </div>
-          <div className="social-row">
-            <span>{text("Find me at")}</span>
-            <a href={`mailto:${profile.email}`}>{text("Email")} ↗</a>
-            <span>{profile.github}</span>
-            <span>{profile.linkedin}</span>
-          </div>
         </div>
         <div className="hero-aside">
           <div className="system-card">

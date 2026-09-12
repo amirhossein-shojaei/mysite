@@ -49,7 +49,7 @@ export const experience: ExperienceData = {
     },
     {
       en: "Today, as a Full-Stack Developer, I work on real products; from designing and implementing user interfaces and APIs to databases, server deployment, and using AI tools to build faster and smarter solutions.",
-      fa: "امروز به‌عنوان یک Full-Stack Developer روی توسعه محصولات واقعی کار می‌کنم؛ از طراحی و پیاده‌سازی رابط کاربری و API گرفته تا دیتابیس، استقرار روی سرور و استفاده از ابزارهای هوش مصنوعی برای ساخت راهکارهای سریع‌تر و هوشمندتر.",
+      fa: "امروز به‌عنوان یک توسعه‌دهنده فول‌استک روی توسعه محصولات واقعی کار می‌کنم؛ از طراحی و پیاده‌سازی رابط کاربری و API گرفته تا دیتابیس، استقرار روی سرور و استفاده از ابزارهای هوش مصنوعی برای ساخت راهکارهای سریع‌تر و هوشمندتر.",
     },
     {
       en: "During this time, I have worked on 5 real projects, all developed as PWAs and installable on mobile.",
@@ -69,7 +69,7 @@ export const experience: ExperienceData = {
       },
       role: {
         en: "Full-Stack Developer",
-        fa: "توسعه‌دهنده Full-Stack",
+        fa: "توسعه‌دهنده فول‌استک",
       },
       paragraphs: [
         {

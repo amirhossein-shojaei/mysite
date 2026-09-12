@@ -870,7 +870,6 @@ textarea {
 }
 .about-facts > div {
   padding: 21px 0;
-  border-bottom: 1px solid var(--line);
   display: grid;
   grid-template-columns: 1fr;
   gap: 4px;
@@ -1225,7 +1224,6 @@ textarea {
   padding-top: 30px;
 }
 .resume-item {
-  border-bottom: 1px solid var(--line);
   padding: 16px 0;
   display: flex;
   flex-direction: column;

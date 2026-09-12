@@ -13,7 +13,7 @@ const text = (en: string, fa: string): LocalizedText => ({ en, fa });
 
 export const services: Service[] = [
   {
-    title: text("Full-Stack Development", "توسعه Full-Stack"),
+    title: text("Full-Stack Development", "توسعه فول‌استک"),
     description: text(
       "Building a complete product from Frontend to Backend",
       "توسعه یک محصول کامل، از Frontend تا Backend",

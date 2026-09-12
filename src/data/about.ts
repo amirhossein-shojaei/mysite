@@ -200,7 +200,7 @@ export const about: AboutData = {
         },
         description: {
           en: "Focusing on Full-Stack development, PWA, and AI-based solutions, and continuing the journey of learning and building real products.",
-          fa: "تمرکز بر توسعه Full-Stack، PWA و راهکارهای مبتنی بر هوش مصنوعی و ادامه‌ی مسیر یادگیری و ساخت محصولات واقعی.",
+          fa: "تمرکز بر توسعه فول‌استک، PWA و راهکارهای مبتنی بر هوش مصنوعی و ادامه‌ی مسیر یادگیری و ساخت محصولات واقعی.",
         },
       },
     ],

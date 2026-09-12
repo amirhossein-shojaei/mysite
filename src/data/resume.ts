@@ -28,7 +28,7 @@ export const resume = {
     eyebrow: { en: "RESUME", fa: "رزومه" },
     title: {
       en: "Full-Stack Developer focused on building real web products, PWAs, and AI integrations.",
-      fa: "توسعه‌دهنده Full-Stack با تمرکز بر ساخت محصولات وب واقعی، PWA و یکپارچه‌سازی هوش مصنوعی.",
+      fa: "توسعه‌دهنده فول‌استک با تمرکز بر ساخت محصولات وب واقعی، PWA و یکپارچه‌سازی هوش مصنوعی.",
     },
     subtitle: {
       en: "A concise overview of my professional path, project experience, technical skills, and areas of expertise; from interface and Backend development to Database, Deployment, and intelligent capabilities.",
@@ -41,7 +41,7 @@ export const resume = {
     paragraphs: [
       {
         en: "A Full-Stack Developer focused on designing and developing practical web products that can be used in real environments.",
-        fa: "توسعه‌دهنده Full-Stack با تمرکز بر طراحی و توسعه محصولات وب کاربردی و قابل استفاده در محیط واقعی.",
+        fa: "توسعه‌دهنده فول‌استک با تمرکز بر طراحی و توسعه محصولات وب کاربردی و قابل استفاده در محیط واقعی.",
       },
       {
         en: "My path in programming began about four years ago and, after years of learning and practice, I started my professional software development activity on 11 Tir 1404.",
@@ -67,7 +67,7 @@ export const resume = {
       {
         title: { en: "Professional Software Development", fa: "توسعه نرم‌افزار حرفه‌ای" },
         company: { en: "Edge Runners", fa: "دوندگان لبه علم" },
-        role: { en: "Full-Stack Developer", fa: "توسعه‌دهنده Full-Stack" },
+        role: { en: "Full-Stack Developer", fa: "توسعه‌دهنده فول‌استک" },
         date: { en: "11 Tir 1404 — Present", fa: "۱۱ تیر ۱۴۰۴ — اکنون" },
         description: [
           {
@@ -88,9 +88,9 @@ export const resume = {
         ],
       },
       {
-        title: { en: "Freelance Full-Stack Developer", fa: "توسعه‌دهنده Full-Stack فریلنسر" },
+        title: { en: "Freelance Full-Stack Developer", fa: "توسعه‌دهنده فول‌استک فریلنسر" },
         company: { en: "Independent practice", fa: "فعالیت مستقل" },
-        role: { en: "Full-Stack Developer", fa: "توسعه‌دهنده Full-Stack" },
+        role: { en: "Full-Stack Developer", fa: "توسعه‌دهنده فول‌استک" },
         date: { en: "Present", fa: "اکنون" },
         description: [
           {
@@ -190,19 +190,19 @@ export const resume = {
       { number: "+5", title: { en: "Real Projects", fa: "پروژه واقعی" }, description: { en: "Experience developing multiple web products and systems designed and built for real use.", fa: "تجربه توسعه چندین محصول و سامانه وب که برای استفاده واقعی طراحی و پیاده‌سازی شده‌اند." } },
       { number: "2", title: { en: "PWA Focus", fa: "تمرکز بر PWA" }, description: { en: "All main projects completed so far have been developed as PWAs and can be installed and used on mobile devices.", fa: "تمام پروژه‌های اصلی انجام‌شده توسط من تاکنون به‌صورت PWA توسعه داده شده‌اند و قابلیت نصب و استفاده روی دستگاه‌های موبایل را دارند." } },
       { number: "3", title: { en: "1+ Year Professional Activity", fa: "بیش از یک سال فعالیت حرفه‌ای" }, description: { en: "I entered professional software development on 11 Tir 1404 and have worked on real products used in the market since then.", fa: "از ۱۱ تیر ۱۴۰۴ وارد مسیر توسعه حرفه‌ای نرم‌افزار شده‌ام و در این مدت روی پروژه‌های واقعی و مورد استفاده بازار فعالیت کرده‌ام." } },
-      { number: "4", title: { en: "Full-Stack", fa: "Full-Stack" }, description: { en: "Experience working across both Frontend and Backend and developing different parts of a product together.", fa: "تجربه کار در هر دو لایه Frontend و Backend و توانایی توسعه بخش‌های مختلف یک محصول در کنار یکدیگر." } },
+      { number: "4", title: { en: "Full-Stack", fa: "فول‌استک" }, description: { en: "Experience working across both Frontend and Backend and developing different parts of a product together.", fa: "تجربه کار در هر دو لایه Frontend و Backend و توانایی توسعه بخش‌های مختلف یک محصول در کنار یکدیگر." } },
       { number: "5", title: { en: "AI in Software Development", fa: "AI در توسعه نرم‌افزار" }, description: { en: "Using AI models and tools to develop product capabilities, process information, and improve software development.", fa: "استفاده از مدل‌ها و ابزارهای هوش مصنوعی برای توسعه قابلیت‌های محصول، پردازش اطلاعات و بهبود فرآیند توسعه نرم‌افزار." } },
     ],
   },
   skills: {
     title: { en: "TECHNICAL SKILLS", fa: "مهارت‌های فنی" },
     groups: [
-      { title: { en: "Frontend", fa: "Frontend" }, skills: "React · Next.js · JavaScript · TypeScript · HTML · CSS · Tailwind CSS · Component-Based Development · React Query · Zustand · Responsive Web Design" },
-      { title: { en: "Backend", fa: "Backend" }, skills: "JavaScript · Node.js · Express.js · REST API · SSE · SSMS · OLAP · PM2" },
-      { title: { en: "Database", fa: "Database" }, skills: "PostgreSQL · SQL · MongoDB · Prisma · MongoDB Compass" },
-      { title: { en: "DevOps & Deployment", fa: "DevOps & Deployment" }, skills: "Docker · Docker Hub · Jenkins · PM2 · Server Deployment · ساخت و آماده‌سازی APK برای PWA" },
-      { title: { en: "Artificial Intelligence", fa: "Artificial Intelligence" }, skills: "OpenAI · Gemini · Claude · Codex · GitHub Copilot · AI Integration · AI-assisted Software Development · Flowise · n8n" },
-      { title: { en: "Machine Learning & Data", fa: "Machine Learning & Data" }, skills: "Python — پیشرفته · NumPy — پیشرفته · Pandas — پیشرفته · Python OOP — متوسط" },
+      { title: { en: "Frontend", fa: "فرانت‌اند" }, skills: "React · Next.js · JavaScript · TypeScript · HTML · CSS · Tailwind CSS · Component-Based Development · React Query · Zustand · Responsive Web Design" },
+      { title: { en: "Backend", fa: "بک‌اند" }, skills: "JavaScript · Node.js · Express.js · REST API · SSE · SSMS · OLAP · PM2" },
+      { title: { en: "Database", fa: "پایگاه داده" }, skills: "PostgreSQL · SQL · MongoDB · Prisma · MongoDB Compass" },
+      { title: { en: "DevOps & Deployment", fa: "دوآپس و استقرار" }, skills: "Docker · Docker Hub · Jenkins · PM2 · Server Deployment · ساخت و آماده‌سازی APK برای PWA" },
+      { title: { en: "Artificial Intelligence", fa: "هوش مصنوعی" }, skills: "OpenAI · Gemini · Claude · Codex · GitHub Copilot · AI Integration · AI-assisted Software Development · Flowise · n8n" },
+      { title: { en: "Machine Learning & Data", fa: "یادگیری ماشین و داده" }, skills: "Python — پیشرفته · NumPy — پیشرفته · Pandas — پیشرفته · Python OOP — متوسط" },
     ],
   },
   additional: {
@@ -212,12 +212,13 @@ export const resume = {
   },
   tools: {
     title: { en: "TOOLS", fa: "ابزارها" },
+    note: { en: "Developer Tools", fa: "ابزارهای توسعه" },
     skills: "Git · GitHub · Postman · MongoDB Compass · Docker Hub · Figma · n8n · Flowise · Crawler",
   },
   expertise: {
     title: { en: "AREAS OF EXPERTISE", fa: "حوزه‌های تخصصی" },
     items: [
-      { title: { en: "Full-Stack Web Development", fa: "Full-Stack Web Development" }, description: { en: "Developing a product from user interface to Backend, API, and Database.", fa: "توسعه محصول از رابط کاربری تا Backend، API و Database." } },
+      { title: { en: "Full-Stack Web Development", fa: "توسعه وب فول‌استک" }, description: { en: "Developing a product from user interface to Backend, API, and Database.", fa: "توسعه محصول از رابط کاربری تا Backend، API و Database." } },
       { title: { en: "Progressive Web Applications", fa: "Progressive Web Applications" }, description: { en: "Building Web Applications with installation and suitable experiences on mobile and desktop.", fa: "ساخت Web Applicationهایی با قابلیت نصب و تجربه مناسب روی موبایل و دسکتاپ." } },
       { title: { en: "AI-Powered Applications", fa: "AI-Powered Applications" }, description: { en: "Adding AI capabilities to real products and connecting AI models to software workflows.", fa: "اضافه‌کردن قابلیت‌های هوش مصنوعی به محصولات واقعی و اتصال مدل‌های AI به فرآیندهای نرم‌افزاری." } },
       { title: { en: "Backend & API Development", fa: "Backend & API Development" }, description: { en: "Designing and developing Backend services and APIs connecting Frontend, Database, and services.", fa: "طراحی و توسعه سرویس‌های Backend و API برای ارتباط میان Frontend، Database و سرویس‌های مختلف." } },
@@ -237,7 +238,7 @@ export const resume = {
   goal: {
     title: { en: "PROFESSIONAL GOAL", fa: "هدف حرفه‌ای" },
     heading: { en: "Building better products, learning more, solving more complex problems.", fa: "ساخت محصولات بهتر، یادگیری بیشتر، حل مسئله‌های پیچیده‌تر." },
-    description: { en: "As I continue my professional path, my focus is on developing modern and intelligent web products, deepening my Full-Stack knowledge, and using AI more effectively in software development.", fa: "در ادامه مسیر حرفه‌ای، تمرکز من روی توسعه محصولات وب مدرن و هوشمند، عمیق‌تر کردن دانش Full-Stack و استفاده مؤثرتر از هوش مصنوعی در فرآیند توسعه نرم‌افزار است." },
+    description: { en: "As I continue my professional path, my focus is on developing modern and intelligent web products, deepening my Full-Stack knowledge, and using AI more effectively in software development.", fa: "در ادامه مسیر حرفه‌ای، تمرکز من روی توسعه محصولات وب مدرن و هوشمند، عمیق‌تر کردن دانش فول‌استک و استفاده مؤثرتر از هوش مصنوعی در فرآیند توسعه نرم‌افزار است." },
   },
   cta: {
     heading: { en: "If you have a project to build, develop, or improve, I would be happy to discuss it.", fa: "اگر پروژه‌ای برای ساخت، توسعه یا بهبود دارید، خوشحال می‌شوم درباره آن صحبت کنیم." },
