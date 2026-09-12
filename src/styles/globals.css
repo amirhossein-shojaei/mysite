@@ -34,6 +34,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
+  overflow-x: hidden;
 }
 a {
   color: inherit;
@@ -175,7 +176,7 @@ textarea {
 .theme-btn:hover,
 .menu-btn:hover {
   border-color: var(--accent);
-  transform: rotate(12deg);
+  transform: none;
 }
 .menu-btn {
   display: none;
@@ -950,6 +951,10 @@ textarea {
   color: var(--muted);
   margin: 0;
 }
+.site:dir(rtl) .about-skill-group p {
+  direction: ltr;
+  text-align: left;
+}
 .timeline {
   max-width: 830px;
   border-left: 1px solid var(--line);
@@ -1151,6 +1156,11 @@ textarea {
   display: flex;
   gap: 7px;
   flex-wrap: wrap;
+}
+.site:dir(rtl) .skill-list {
+  direction: ltr;
+  justify-content: flex-start;
+  text-align: left;
 }
 .skill.core {
   color: var(--accent);
@@ -1651,6 +1661,25 @@ textarea {
   .experience-closing h2 {
     font-size: 24px;
   }
+  .contact-aside {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 12px;
+  }
+  .contact-aside > .eyebrow,
+  .contact-aside > .contact-note {
+    width: 100%;
+  }
+  .contact-aside > a {
+    display: inline-flex;
+    width: auto;
+    padding: 10px 0;
+    border-bottom: 0;
+    white-space: nowrap;
+  }
+  .contact-aside > a b {
+    display: none;
+  }
   .footer-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1886,6 +1915,7 @@ textarea {
 .marquee-row {
   display: flex;
   align-items: center;
+  height: 48px;
   min-height: 48px;
 }
 .marquee-label {
@@ -2612,6 +2642,20 @@ p {
 .site:dir(rtl) .timeline-marker {
   margin-left: 0;
   margin-right: -16px;
+}
+@media (max-width: 820px) {
+  .hero-code,
+  .site:dir(rtl) .hero-code {
+    position: static;
+    display: block;
+    margin-top: 18px;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+  .marquee-row {
+    height: 48px;
+    min-height: 48px;
+  }
 }
 .site:dir(rtl) .detail-links {
   align-items: flex-start;

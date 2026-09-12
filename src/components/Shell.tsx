@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { ReactNode, useEffect, useRef, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { profile } from "../data/profile";
 import { useLanguage } from "../locales";
@@ -17,22 +17,37 @@ const links = [
 export function Shell({ children }: { children: ReactNode }) {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
   const { language, setLanguage, t } = useLanguage();
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+  useEffect(() => {
+    if (!open) return;
+    const closeOnOutsideClick = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", closeOnOutsideClick);
+    return () => document.removeEventListener("mousedown", closeOnOutsideClick);
+  }, [open]);
   return (
     <div className="site">
       <div className="topline">
-        <span>AMIRHOSSEIN SHOJAEI / FULL-STACK DEVELOPER</span>
+        <span>
+          {language === "fa"
+            ? "امیرحسین شجاعی / توسعه‌دهنده فول‌استک"
+            : "AMIRHOSSEIN SHOJAEI / FULL-STACK DEVELOPER"}
+        </span>
         <span>
           {language === "fa" ? "وب · PWA · هوش مصنوعی" : "WEB · PWA · AI"}
         </span>
       </div>
       <header className={`nav-wrap ${scrolled ? "scrolled" : ""}`}>
-        <nav className="nav container">
+        <nav ref={navRef} className="nav container">
           <Link to="/" className="brand" onClick={() => setOpen(false)}>
             <span className="brand-mark">AS</span>
             <span>{profile.name[language]}</span>

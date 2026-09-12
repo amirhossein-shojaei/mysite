@@ -69,7 +69,7 @@ export const projects: Project[] = [
   },
   {
     id: "co-up",
-    title: "CO-UP",
+    title: "coup",
     description:
       "A responsive workspace reservation experience for booking seats and meeting rooms online.",
     category: "Reservation PWA",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     organizationUrl: "https://co-up.net",
     featured: true,
     status: "Completed",
-    client: "CO-UP",
+    client: "coup",
     problem:
       "Users needed a convenient way to reserve coworking resources online.",
     solution:

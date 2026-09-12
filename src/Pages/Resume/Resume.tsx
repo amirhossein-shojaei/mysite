@@ -59,33 +59,37 @@ export function Resume() {
 
       <div className="resume-section">
         <p className="eyebrow">{txt(resume.projects.title)}</p>
-        <div className="resume-two">
+        <div className="skills-grid">
           {resume.projects.items.map((project) => (
-            <article className="resume-item" key={project.number}>
-              <strong>
-                {project.number} — {txt(project.title)}
-              </strong>
-              <span>{txt(project.subtitle)}</span>
-              {project.description.map((paragraph, index) => (
-                <p key={index}>{txt(paragraph)}</p>
-              ))}
-              <div className="tags resume-tags">
-                {project.focus.map((focus, index) => (
-                  <span key={index}>{txt(focus)}</span>
-                ))}
+            <article className="skill-group" key={project.number}>
+              <div className="skill-heading">
+                <h2>
+                  {project.number} — {txt(project.title)}
+                </h2>
               </div>
-              {project.company && <span>{txt(project.company)}</span>}
-              <div className="card-links">
-                {project.app && (
-                  <a className="text-link" href={project.app} target="_blank" rel="noreferrer">
-                    {language === "fa" ? "اپلیکیشن" : "App"} ↗
-                  </a>
-                )}
-                {project.website && (
-                  <a className="text-link" href={project.website} target="_blank" rel="noreferrer">
-                    {language === "fa" ? "وب‌سایت" : "Website"} ↗
-                  </a>
-                )}
+              <div className="resume-project-content">
+                <span>{txt(project.subtitle)}</span>
+                {project.description.map((paragraph, index) => (
+                  <p key={index}>{txt(paragraph)}</p>
+                ))}
+                <div className="tags resume-tags">
+                  {project.focus.map((focus, index) => (
+                    <span key={index}>{txt(focus)}</span>
+                  ))}
+                </div>
+                {project.company && <span>{txt(project.company)}</span>}
+                <div className="card-links">
+                  {project.app && (
+                    <a className="text-link" href={project.app} target="_blank" rel="noreferrer">
+                      {language === "fa" ? "اپلیکیشن" : "App"} ↗
+                    </a>
+                  )}
+                  {project.website && (
+                    <a className="text-link" href={project.website} target="_blank" rel="noreferrer">
+                      {language === "fa" ? "وب‌سایت" : "Website"} ↗
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           ))}
@@ -129,20 +133,33 @@ export function Resume() {
 
       <div className="resume-section">
         <p className="eyebrow">{txt(resume.additional.title)}</p>
-        <div className="tags resume-tags">
-          {resume.additional.skills.split(" · ").map((skill) => (
-            <span key={skill}>{skill}</span>
-          ))}
+        <div className="skills-grid">
+          <article className="skill-group">
+            <div className="skill-heading">
+              <h2>{txt(resume.additional.note)}</h2>
+            </div>
+            <div className="skill-list">
+              {resume.additional.skills.split(" · ").map((skill) => (
+                <span className="skill" key={skill}>{skill}</span>
+              ))}
+            </div>
+          </article>
         </div>
-        <p className="muted">{txt(resume.additional.note)}</p>
       </div>
 
       <div className="resume-section">
         <p className="eyebrow">{txt(resume.tools.title)}</p>
-        <div className="tags resume-tags">
-          {resume.tools.skills.split(" · ").map((skill) => (
-            <span key={skill}>{skill}</span>
-          ))}
+        <div className="skills-grid">
+          <article className="skill-group">
+            <div className="skill-heading">
+              <h2>{language === "fa" ? "ابزارهای توسعه" : "Developer Tools"}</h2>
+            </div>
+            <div className="skill-list">
+              {resume.tools.skills.split(" · ").map((skill) => (
+                <span className="skill" key={skill}>{skill}</span>
+              ))}
+            </div>
+          </article>
         </div>
       </div>
 

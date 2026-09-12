@@ -212,33 +212,36 @@ export const about: AboutData = {
     },
     groups: [
       {
-        category: { en: "Frontend", fa: "Frontend" },
+        category: { en: "Frontend", fa: "فرانت‌اند" },
         skills:
           "React · Next.js · TypeScript · JavaScript · Tailwind CSS · HTML · CSS · React Query · Zustand · Responsive Design · Component-Based Development",
       },
       {
-        category: { en: "Backend", fa: "Backend" },
+        category: { en: "Backend", fa: "بک‌اند" },
         skills:
           "Node.js · Express · JavaScript · SSE · OLAP · SSMS · PM2",
       },
       {
-        category: { en: "Database", fa: "Database" },
+        category: { en: "Database", fa: "پایگاه داده" },
         skills: "PostgreSQL · SQL · MongoDB · Prisma",
       },
       {
-        category: { en: "DevOps & Deployment", fa: "DevOps & Deployment" },
+        category: { en: "DevOps & Deployment", fa: "دوآپس و استقرار" },
         skills: "Docker · Jenkins · Docker Hub · Server Deployment",
       },
       {
-        category: { en: "AI & Automation", fa: "AI & Automation" },
+        category: { en: "AI & Automation", fa: "هوش مصنوعی و اتوماسیون" },
         skills: "OpenAI · Gemini · Claude · Codex · Copilot · Lovable · Flowise · n8n",
       },
       {
-        category: { en: "Machine Learning & Data", fa: "Machine Learning & Data" },
+        category: {
+          en: "Machine Learning & Data",
+          fa: "یادگیری ماشین و داده",
+        },
         skills: "Python · Python OOP · NumPy · Pandas",
       },
       {
-        category: { en: "Other", fa: "Other" },
+        category: { en: "Other", fa: "سایر" },
         skills:
           "C++ · C# · Flutter · Git · GitHub · Postman · MongoDB Compass · Figma · Web Crawling",
       },

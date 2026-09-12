@@ -113,7 +113,7 @@ export const experience: ExperienceData = {
         },
         domain: {
           en: "Fitness / AI",
-          fa: "Fitness / AI",
+          fa: "تناسب‌اندام / هوش مصنوعی",
         },
         links: [
           {
@@ -154,7 +154,7 @@ export const experience: ExperienceData = {
         },
         domain: {
           en: "Oil & Energy / Data Processing / AI",
-          fa: "Oil & Energy / Data Processing / AI",
+          fa: "نفت و انرژی / پردازش داده / هوش مصنوعی",
         },
         links: [
           {
@@ -167,8 +167,8 @@ export const experience: ExperienceData = {
     {
       number: "۴",
       title: {
-        en: "Co-UP",
-        fa: "Co-UP",
+        en: "coup",
+        fa: "coup",
       },
       subtitle: {
         en: "Coworking space management platform",
@@ -176,8 +176,8 @@ export const experience: ExperienceData = {
       },
       paragraphs: [
         {
-          en: "Co-UP is the first coworking space in Pardis Technology Park, providing a platform for freelancers, startup teams, and innovative businesses. Located alongside more than 400 technology and knowledge-based companies, it offers shared workspace, meeting rooms, event rooms, and networking spaces.",
-          fa: "Co-UP اولین فضای کار اشتراکی پارک فناوری پردیس است و بستری برای فعالیت فریلنسرها، تیم‌های استارتاپی و کسب‌وکارهای نوآور فراهم می‌کند. این مجموعه در کنار بیش از ۴۰۰ شرکت فناور و دانش‌بنیان قرار دارد و امکاناتی مانند فضای کار اشتراکی، اتاق جلسه، اتاق رویداد و فضاهای شبکه‌سازی ارائه می‌دهد.",
+          en: "coup is the first coworking space in Pardis Technology Park, providing a platform for freelancers, startup teams, and innovative businesses. Located alongside more than 400 technology and knowledge-based companies, it offers shared workspace, meeting rooms, event rooms, and networking spaces.",
+          fa: "coup اولین فضای کار اشتراکی پارک فناوری پردیس است و بستری برای فعالیت فریلنسرها، تیم‌های استارتاپی و کسب‌وکارهای نوآور فراهم می‌کند. این مجموعه در کنار بیش از ۴۰۰ شرکت فناور و دانش‌بنیان قرار دارد و امکاناتی مانند فضای کار اشتراکی، اتاق جلسه، اتاق رویداد و فضاهای شبکه‌سازی ارائه می‌دهد.",
         },
         {
           en: "For this collection, a dedicated PWA was developed for managing and reserving spaces.",
@@ -195,7 +195,7 @@ export const experience: ExperienceData = {
         },
         domain: {
           en: "Workspace Management / Reservation",
-          fa: "Workspace Management / Reservation",
+          fa: "مدیریت فضای کار / رزرو",
         },
         links: [
           {
@@ -240,7 +240,7 @@ export const experience: ExperienceData = {
         },
         domain: {
           en: "Event Technology / AI / Networking",
-          fa: "Event Technology / AI / Networking",
+          fa: "فناوری رویداد / هوش مصنوعی / شبکه‌سازی",
         },
         links: [
           {

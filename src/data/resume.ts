@@ -147,7 +147,7 @@ export const resume = {
       },
       {
         number: "۳",
-        title: { en: "CO-UP", fa: "CO-UP" },
+        title: { en: "coup", fa: "coup" },
         subtitle: { en: "Coworking space reservation PWA", fa: "PWA رزرو فضای کار اشتراکی" },
         description: [
           { en: "A Progressive Web Application for a coworking space in Pardis Technology Park, allowing users to view and reserve seats and meeting rooms online.", fa: "توسعه یک Progressive Web Application برای فضای کار اشتراکی در پارک فناوری پردیس. کاربران این سامانه می‌توانند فضای مورد نیاز خود، از جمله صندلی‌ها و اتاق‌های جلسات را به‌صورت آنلاین مشاهده و رزرو کنند." },

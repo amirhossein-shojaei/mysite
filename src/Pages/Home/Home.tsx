@@ -105,15 +105,15 @@ export function Home() {
               <span>
                 <i className="pulse" /> {text("SYSTEM ONLINE")}
               </span>
-              <small>AS / 001</small>
+              <small>{language === "fa" ? "AS / ۰۰۱" : "AS / 001"}</small>
             </div>
             <p className="system-name">
-              AMIRHOSSEIN
+              {language === "fa" ? "امیرحسین" : "AMIRHOSSEIN"}
               <br />
               <b>
-                FULL-STACK
+                {language === "fa" ? "توسعه‌دهنده" : "FULL-STACK"}
                 <br />
-                DEVELOPER
+                {language === "fa" ? "فول‌استک" : "DEVELOPER"}
               </b>
             </p>
             <div className="system-rule" />
@@ -172,8 +172,15 @@ export function Home() {
         </div>
       </section>
       <section className="marquee-section">
-        <Marquee label="TECH" items={tech} />
-        <Marquee label="AI + TOOLS" items={ai} reverse />
+        <Marquee
+          label={language === "fa" ? "تکنولوژی" : "TECH"}
+          items={tech}
+        />
+        <Marquee
+          label={language === "fa" ? "ابزارهای هوش مصنوعی" : "AI + TOOLS"}
+          items={ai}
+          reverse
+        />
       </section>
       <ScrollReveal>
         <section className="section intro-section container">
