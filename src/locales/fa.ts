@@ -257,7 +257,7 @@ const content: Record<string, string> = {
   "Failed to send your message. Please try again.":
     "ارسال پیام با مشکل مواجه شد. لطفاً دوباره تلاش کنید.",
   "Your message has been sent successfully. I'll get back to you soon.":
-    "پیام شما با موفقیت ارسال شد. به زودی با شما تماس خواهم گرفت.",
+    "پیام شما با موفقیت ارسال شد. به زودی پیام شما را پاسخ خواهم داد.",
   "DIRECT CHANNELS": "راه‌های ارتباطی",
   GitHub: "گیت‌هاب",
   LinkedIn: "لینکدین",
