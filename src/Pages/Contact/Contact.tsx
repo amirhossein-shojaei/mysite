@@ -4,8 +4,10 @@ import { profile } from "../../data/profile";
 import { useLanguage } from "../../locales";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
-const WEB3FORMS_ACCESS_KEY = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
-
+const WEB3FORMS_ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+  "9587c812-1af6-4d4d-9f01-b9706e1bc7de";
+  
 type Status = "idle" | "loading" | "success" | "error";
 
 export function Contact() {
