@@ -250,6 +250,14 @@ const content: Record<string, string> = {
   Message: "پیام",
   "Tell me a little about your project...": "کمی درباره پروژه خود بگویید...",
   "Send message ↗": "ارسال پیام ←",
+  "Sending...": "در حال ارسال...",
+  "Please fill in all required fields.": "لطفاً همهٔ فیلدهای ضروری را پر کنید.",
+  "Please enter a valid email address.":
+    "لطفاً یک آدرس ایمیل معتبر وارد کنید.",
+  "Failed to send your message. Please try again.":
+    "ارسال پیام با مشکل مواجه شد. لطفاً دوباره تلاش کنید.",
+  "Your message has been sent successfully. I'll get back to you soon.":
+    "پیام شما با موفقیت ارسال شد. به زودی با شما تماس خواهم گرفت.",
   "DIRECT CHANNELS": "راه‌های ارتباطی",
   GitHub: "گیت‌هاب",
   LinkedIn: "لینکدین",

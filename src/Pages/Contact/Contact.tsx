@@ -2,13 +2,87 @@ import { FormEvent, useState } from "react";
 import { SectionTitle } from "../../components/Shell";
 import { profile } from "../../data/profile";
 import { useLanguage } from "../../locales";
+
+const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+const WEB3FORMS_ACCESS_KEY =
+  import.meta.env.VITE_WEB3FORMS_ACCESS_KEY ||
+  "b64af739-37b7-4c13-9455-772993363eda";
+
+type Status = "idle" | "loading" | "success" | "error";
+
 export function Contact() {
-  const [sent, setSent] = useState(false);
-  const { t, language } = useLanguage();
-  function submit(e: FormEvent<HTMLFormElement>) {
+  const { t } = useLanguage();
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState<Status>("idle");
+  const [error, setError] = useState("");
+
+  const update = (field: keyof typeof form, value: string) => {
+    setForm((prev) => ({ ...prev, [field]: value }));
+    if (status === "error") {
+      setStatus("idle");
+      setError("");
+    }
+  };
+
+  const validate = () => {
+    if (!form.name.trim() || !form.email.trim() || !form.subject.trim() || !form.message.trim()) {
+      setError(t("Please fill in all required fields."));
+      return false;
+    }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email.trim())) {
+      setError(t("Please enter a valid email address."));
+      return false;
+    }
+    return true;
+  };
+
+  const submit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (e.currentTarget.checkValidity()) setSent(true);
-  }
+    if (!validate()) {
+      setStatus("error");
+      return;
+    }
+
+    setStatus("loading");
+    setError("");
+
+    try {
+      const response = await fetch(WEB3FORMS_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: form.name.trim(),
+          email: form.email.trim(),
+          subject: form.subject.trim(),
+          message: form.message.trim(),
+          botcheck: "",
+        }),
+      });
+
+      const data = await response.json().catch(() => ({}));
+
+      if (response.ok && data.success) {
+        setStatus("success");
+        setForm({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+        setError(t("Failed to send your message. Please try again."));
+      }
+    } catch {
+      setStatus("error");
+      setError(t("Failed to send your message. Please try again."));
+    }
+  };
+
+  const isBusy = status === "loading" || status === "success";
+
   return (
     <section className="page container contact">
       <SectionTitle
@@ -20,29 +94,47 @@ export function Contact() {
         )}
       </SectionTitle>
       <div className="contact-grid">
-        <form onSubmit={submit} className="contact-form">
-          {sent ? (
+        <form onSubmit={submit} className="contact-form" noValidate>
+          {status === "success" ? (
             <div className="success">
               <span>✓</span>
               <h2>{t("Message received.")}</h2>
               <p className="muted">
                 {t(
-                  "This is a simulated submission for now. A backend can be connected later.",
+                  "Your message has been sent successfully. I'll get back to you soon.",
                 )}
               </p>
               <button
                 type="button"
                 className="text-link"
-                onClick={() => setSent(false)}
+                onClick={() => {
+                  setStatus("idle");
+                  setError("");
+                }}
               >
                 {t("Send another message →")}
               </button>
             </div>
           ) : (
             <>
+              <input
+                type="checkbox"
+                name="botcheck"
+                className="hidden"
+                style={{ display: "none" }}
+                tabIndex={-1}
+                autoComplete="off"
+              />
               <label>
                 {t("Name")}
-                <input name="name" required placeholder={t("Your name")} />
+                <input
+                  name="name"
+                  required
+                  placeholder={t("Your name")}
+                  value={form.name}
+                  onChange={(e) => update("name", e.target.value)}
+                  disabled={isBusy}
+                />
               </label>
               <label>
                 {t("Email")}
@@ -51,6 +143,9 @@ export function Contact() {
                   required
                   type="email"
                   placeholder="you@example.com"
+                  value={form.email}
+                  onChange={(e) => update("email", e.target.value)}
+                  disabled={isBusy}
                 />
               </label>
               <label>
@@ -59,6 +154,9 @@ export function Contact() {
                   name="subject"
                   required
                   placeholder={t("How can I help?")}
+                  value={form.subject}
+                  onChange={(e) => update("subject", e.target.value)}
+                  disabled={isBusy}
                 />
               </label>
               <label>
@@ -68,10 +166,20 @@ export function Contact() {
                   required
                   rows={5}
                   placeholder={t("Tell me a little about your project...")}
+                  value={form.message}
+                  onChange={(e) => update("message", e.target.value)}
+                  disabled={isBusy}
                 />
               </label>
-              <button className="btn" type="submit">
-                {t("Send message ↗")}
+              {status === "error" && error && (
+                <p className="form-error" role="alert">
+                  {error}
+                </p>
+              )}
+              <button className="btn" type="submit" disabled={isBusy}>
+                {status === "loading"
+                  ? t("Sending...")
+                  : t("Send message ↗")}
               </button>
             </>
           )}

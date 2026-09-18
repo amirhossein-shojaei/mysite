@@ -1310,6 +1310,11 @@ textarea {
 .success p {
   font-size: 13px;
 }
+.form-error {
+  color: #ff6b6b;
+  font-size: 13px;
+  margin: 4px 0 12px;
+}
 .not-found {
   text-align: center;
   padding-top: 160px;
