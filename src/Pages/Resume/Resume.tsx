@@ -1,11 +1,11 @@
 import { Button, SectionTitle } from "../../components/Shell";
+import { ResumeDropdown } from "../../components/ResumeDropdown";
 import { resume } from "../../data/resume";
 import { useLanguage } from "../../locales";
 
 export function Resume() {
   const { language } = useLanguage();
   const txt = (value: { en: string; fa: string }) => value[language];
-  const base = import.meta.env.BASE_URL;
 
   return (
     <section className="page container resume">
@@ -16,13 +16,7 @@ export function Resume() {
         >
           {txt(resume.hero.subtitle)}
         </SectionTitle>
-        <a
-          className="btn"
-          href={`${base}pdf-resume/${language === "fa" ? "resume-fa.pdf" : "resume-en.pdf"}`}
-          download
-        >
-          {language === "fa" ? "دانلود رزومه ↓" : "Download Resume ↓"}
-        </a>
+        <ResumeDropdown className="btn" />
       </div>
 
       <div className="resume-section">

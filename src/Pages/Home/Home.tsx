@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { profile } from "../../data/profile";
 import { projects } from "../../data/projects";
@@ -7,52 +6,8 @@ import { ProjectCard } from "../../components/ProjectCard";
 import { Button, SectionTitle } from "../../components/Shell";
 import { Marquee } from "../../components/Marquee";
 import { ScrollReveal } from "../../components/ScrollReveal";
+import { ResumeDropdown } from "../../components/ResumeDropdown";
 import { useLanguage } from "../../locales";
-
-function ResumeDropdown({ text }: { text: (key: string) => string }) {
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  const base = import.meta.env.BASE_URL;
-  useEffect(() => {
-    const handle = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handle);
-    return () => document.removeEventListener("mousedown", handle);
-  }, []);
-  return (
-    <div className="resume-dropdown" ref={ref}>
-      <button
-        type="button"
-        className="download"
-        onClick={() => setOpen(!open)}
-        aria-expanded={open}
-      >
-        {text("Download Resume")} ↓
-      </button>
-      {open && (
-        <div className="resume-menu">
-          <a
-            href={`${base}pdf-resume/resume-fa.pdf`}
-            download
-            onClick={() => setOpen(false)}
-          >
-            {text("Persian Resume")}
-          </a>
-          <a
-            href={`${base}pdf-resume/resume-en.pdf`}
-            download
-            onClick={() => setOpen(false)}
-          >
-            {text("English Resume")}
-          </a>
-        </div>
-      )}
-    </div>
-  );
-}
 
 export function Home() {
   const { t, language } = useLanguage();
@@ -90,7 +45,7 @@ export function Home() {
             <Button to="/contact" secondary>
               {text("Contact Me")}
             </Button>
-            <ResumeDropdown text={text} />
+            <ResumeDropdown />
           </div>
         </div>
         <div className="hero-aside">
