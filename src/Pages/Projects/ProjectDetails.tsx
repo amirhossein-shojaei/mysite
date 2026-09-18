@@ -37,13 +37,19 @@ export function ProjectDetails() {
       <div className="detail-head">
         <div>
           <p className="eyebrow">{t(p.category)}</p>
-          <h1>{p.title}</h1>
+          <h1>{t(p.title)}</h1>
           <p className="lead">{t(p.description)}</p>
         </div>
         <div className="detail-links">
           {p.projectUrl && (
             <ArrowLink href={p.projectUrl}>
-              {t(p.id === "elixia" ? "Visit Project" : "Open Application")}
+              {t(
+                p.id === "elixia"
+                  ? "Visit Project"
+                  : p.id === "oiec"
+                    ? "Official Website"
+                    : "Open Application",
+              )}
             </ArrowLink>
           )}
           {p.organizationUrl && (
@@ -103,6 +109,12 @@ export function ProjectDetails() {
             )}
           </div>
         </div>
+        {p.result && (
+          <div className="detail-block">
+            <p className="eyebrow">{t("Result")}</p>
+            <p>{t(p.result)}</p>
+          </div>
+        )}
       </div>
     </section>
   );

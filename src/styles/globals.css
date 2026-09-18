@@ -1339,7 +1339,7 @@ textarea {
   align-items: flex-end;
 }
 .detail-head h1 {
-  font-size: clamp(55px, 10vw, 110px);
+  font-size: clamp(36px, 5vw, 64px);
 }
 .lead {
   font-size: 18px;
@@ -1353,8 +1353,9 @@ textarea {
   align-items: flex-end;
 }
 .detail-art {
-  height: 400px;
-  margin: 60px 0;
+  height: 320px;
+  max-width: 900px;
+  margin: 50px auto;
   background: linear-gradient(135deg, #233035, #12181a);
   border: 1px solid #3a4a4a;
   display: grid;
@@ -2210,6 +2211,10 @@ html[lang="fa"] .detail-block p,
 html[lang="fa"] .detail-block li,
 html[lang="fa"] .contact-note {
   line-height: 2.05;
+}
+html[lang="fa"] .project-card h3 {
+  font-family: "Noto Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0;
 }
 html[lang="fa"] .project-card p:not(.eyebrow) {
   line-height: 2;

@@ -49,10 +49,12 @@ export function ProjectCard({
         )}
       </div>
       <p className="eyebrow">{text(project.category)}</p>
-      <h3>{project.title}</h3>
-      <p className="muted">{text(project.description)}</p>
+      <h3>{text(project.title)}</h3>
+      <p className="muted">
+        {text(project.shortDescription || project.description)}
+      </p>
       <div className="tags">
-        {project.technologies.map((technology) => (
+        {(project.cardTechnologies || project.technologies).map((technology) => (
           <span key={technology}>{text(technology)}</span>
         ))}
       </div>
